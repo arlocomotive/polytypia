@@ -18,10 +18,10 @@ function time() end
 ---The local `Player`'s `Camera`.
 Camera = nil
 
----`Vector3` and `Vector2` can be coerced into each other implicitly.
+---`Vector4`, `Vector3`, `Vector2` can be coerced into each other implicitly.
 ---
 ---TODO find a better way to do this, this is a temporary solution for some `Input` functions
----@alias AnyVector Vector3 | Vector2
+---@alias AnyVector Vector4 | Vector3 | Vector2
 
 ---@type fun(deltaTime: number)?
 ---
@@ -88,6 +88,3 @@ _MOONSHARP = {
   is_pcl = false,
   banner = "",
 }
-
----@deprecated This does not exist in Polytoria.
-_ENV = nil

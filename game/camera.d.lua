@@ -41,5 +41,5 @@
 ---@field ClipThroughWalls boolean
 ---Determines the multiplier for `HorizontalSpeed` and `VerticalSpeed`.
 ---@field SensitivityMultiplier number
----Determines what `DynamicInstance` to follow when `Mode` is set to `FollowTarget`.
+---Determines what `DynamicInstance` to follow when `Mode` is set to `CameraMode.FollowTarget`.
 ---@field FollowTarget DynamicInstance

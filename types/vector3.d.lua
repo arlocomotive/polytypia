@@ -3,10 +3,16 @@
 ---@class (exact) Vector3
 ---The X component of the `Vector3`.
 ---@field X number
+---The X component of the `Vector3`.
+---@field [0] number
 ---The Y component of the `Vector3`.
 ---@field Y number
+---The Y component of the `Vector3`.
+---@field [1] number
 ---The Z component of the `Vector3`.
 ---@field Z number
+---The Z component of the `Vector3`.
+---@field [2] number
 ---The length of the `Vector3`.
 ---@field magnitude number
 ---The squared length of the `Vector3`.
@@ -17,7 +23,7 @@
 ---@operator sub(Vector3): Vector3
 ---@operator mul(number): Vector3
 ---@operator div(number): Vector3
----@operator unm(): Vector3
+---@operator unm: Vector3
 
 ---`Vector3` is a 3D vector with X, Y and Z components.
 Vector3 = {}
