@@ -1,0 +1,5 @@
+---@meta ServerHidden
+---`ServerHidden` is a service used for hiding `Instance`s. The entire service and its descendants are not replicated to clients.
+---
+---Currently, `ServerHidden` can be accessed from `LocalScript`s when testing locally through Polytoria Creator. This is likely a bug.
+---@class (exact) ServerHidden: Instance

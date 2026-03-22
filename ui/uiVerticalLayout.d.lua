@@ -1,0 +1,3 @@
+---@meta UIVerticalLayout
+---`UIVerticalLayout` is an `Instance` that aligns all of its children vertically.
+---@class (exact) UIVerticalLayout: UIHVLayout

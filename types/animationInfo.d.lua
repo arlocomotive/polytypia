@@ -1,0 +1,11 @@
+---@meta AnimationInfo
+---Unknown.
+---@class (exact) AnimationInfo
+---Determines the name of the `AnimationInfo`.
+---@field Name string
+---Determines the path of the `AnimationInfo`.
+---@field Path string
+---Determines the length of the `AnimationInfo`.
+---@field Length number
+---Determines whether the `AnimationInfo` is playing or not.
+---@field IsPlaying boolean

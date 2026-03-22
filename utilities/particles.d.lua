@@ -1,0 +1,67 @@
+---@meta Particles
+---`Particles` are `DynamicInstance`s, that spawn and render particles in the world.
+---@class (exact) Particles: DynamicInstance
+---Determines the image ID of the particles.
+---@field ImageID string
+---Determines the `ImageType` of the `ImageID`.
+---@field ImageType ImageType
+---Determines the size of a particle over its lifetime.
+---@field Color ColorRange
+---Determines the color mode of the particles.
+---@field ColorMode ParticleColorMode
+---Determines the range of the lifetime of the particles. A random value in this `NumberRange` will be chosen for each particle lifetime.
+---@field Lifetime NumberRange
+---Determines the size of a particle over its lifetime.
+---@field SizeOverLifetime NumberRange
+---Determines speed of the particles. A random value in this `NumberRange` will be chosen. The particle moves in its direction at this speed.
+---@field Speed NumberRange
+---Determines the amount of particles spawned in every second.
+---@field EmissionRate integer
+---Determines the maximum amount of particles that can exist at any time.
+---@field MaxParticles integer
+---Determines the gravitational force applied to the particles.
+---@field Gravity number
+---Determines what space the particles should be simulated in.
+---@field SimulationSpace ParticleSimulationSpace
+---Determines the rotation that a particle will start in. A random value in this `NumberRange` will be chosen.
+---@field StartRotation NumberRange
+---Determines the angular velocity of the particles. A random value in this `NumberRange` will be chosen.
+---@field AngularVelocity NumberRange
+---Determines whether or not the `Particles` should automatically start emitting.
+---@field Autoplay boolean
+---Determines whether or not the `Particles` loop indefinitely. If disabled, the `Particles` will stop emitting after `Duration` seconds.
+---@field Loop boolean
+---Determines the duration of how long the `Particles` keep emitting particles if `Loop` is disabled.
+---@field Duration number
+---Determines the shape of where the particles spawn.
+---@field Shape ParticleShape
+---Determines the radius of the `Shape`.
+---@field ShapeRadius number
+---Determines the angle of the `Shape`.
+---@field ShapeAngle number
+---Determines the scale of the `Shape`.
+---@field ShapeScale number
+---Returns whether the `Particles` is currently emitting particles.
+---@field IsPlaying boolean
+---Returns whether the `Particles` is currently paused.
+---@field IsPaused boolean
+---Returns whether the `Particles` is currently stopped.
+---@field IsStopped boolean
+---Returns the amount of particles currently emitted and still alive.
+---@field ParticleCount integer
+---Returns the time in the `Duration` timespan.
+---@field Time number
+---Returns the total time the `Particles` object has been emitting particles for.
+---@field TotalTime number
+---Starts the emission of particles.
+---@field Play fun(self: Particles)
+---Pauses the emission of particles.
+---@field Pause fun(self: Particles)
+---Stops the emission of particles.
+---@field Stop fun(self: Particles)
+---Clears all currently emitted particles.
+---@field Clear fun(self: Particles)
+---Emits `count` particles immediately.
+---@field Clear fun(self: Particles, count: integer)
+---Simulates the `Particles` for the given `time`. This includes all physics, emission, etc.
+---@field Simulate fun(self: Particles, time: number)

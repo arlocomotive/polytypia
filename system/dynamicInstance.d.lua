@@ -1,0 +1,51 @@
+---@meta DynamicInstance
+---`DynamicInstance` is the base class where all objects with a position, rotation and scale derive from.
+---@class (exact) DynamicInstance: Instance
+---The forward `Vector3` of this `DynamicInstance`.
+---@field Forward Vector3
+---Specifies the `Position` relative to the `Parent` of a `DynamicInstance`.
+---@field LocalPosition Vector3
+---Specifies the `Rotation` relative to the `Parent` of a `DynamicInstance`.
+---
+---Rotation is in euler angles.
+---@field LocalRotation Vector3
+---The `Size` of the `DynamicInstance` relative to its `Parent`.
+---@field LocalSize Vector3
+---Specifies the position of a `DynamicInstance`.
+---@field Position Vector3
+---The right vector of this `DynamicInstance`.
+---@field Right Vector3
+---Specifies the rotation of a `DynamicInstance`.
+---
+---Rotation is in euler angles.
+---@field Rotation Vector3
+---Specifies the size of a `DynamicInstance`.
+---@field Size Vector3
+---The up `Vector3` of this `DynamicInstance`.
+---@field Up Vector3
+---The `Quaternion` of this `DynamicInstance`.
+---@field Quaternion Quaternion
+---The local `Quaternion` of this `DynamicInstance`.
+---@field LocalQuaternion Quaternion
+---Rotates the `DynamicInstance` so that `Forward` looks at the target.
+---@field LookAt fun(self: DynamicInstance, rotation: Vector3)
+---@field LookAt fun(self: DynamicInstance, rotation: Vector3, worldUp: Vector3)
+---@field LookAt fun(self: DynamicInstance, dynamicInstance: DynamicInstance)
+---Moves the transform in the direction and distance of `translation`.
+---@field Translate fun(self: DynamicInstance, translation: Vector3)
+---Rotates the `DynamicInstance` around a point.
+---@field RotateAround fun(self: DynamicInstance, point: Vector3, axis: Vector3, angle: number)
+---Rotates the `DynamicInstance` by the specified Euler angles.
+---@field Rotate fun(self: DynamicInstance, eulerAngles: Vector3)
+---Unknown.
+---@field InverseTransformPoint fun(self: DynamicInstance, point: Vector3): Vector3
+---Unknown.
+---@field TransformPoint fun(self: DynamicInstance, point: Vector3): Vector3
+---Unknown.
+---@field InverseTransformDirection fun(self: DynamicInstance, direction: Vector3): Vector3
+---Unknown.
+---@field TransformDirection fun(self: DynamicInstance, direction: Vector3): Vector3
+---Unknown.
+---@field InverseTransformVector fun(self: DynamicInstance, vector: Vector3): Vector3
+---Unknown.
+---@field InverseTransformPosition fun(self: DynamicInstance, position: Vector3): Vector3

@@ -1,0 +1,16 @@
+---@meta Tool
+---@alias AnimationName "slash" | "eat" | "drink"
+---`Tool`s are `Instance`s that can be held by `Player`s.
+---@class (exact) Tool: DynamicInstance
+---Determines whether the `Tool` can be dropped by the `Player` or not.
+---@field Droppable boolean
+---Fires when the `Player` clicks while holding the `Tool`.
+---@field Activated Event<fun()>
+---Fires when the `Player` lets go of the mouse button while holding the `Tool`.
+---@field Deactivated Event<fun()>
+---Fires when the `Tool` is equipped.
+---@field Equipped Event<fun()>
+---Fires when the `Tool` is unequipped.
+---@field Unequipped Event<fun()>
+---Plays an animation on the `Tool` or the `Player` that is currently holding the `Tool`.
+---@field Play fun(self: Tool, animationName: AnimationName)

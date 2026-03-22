@@ -1,0 +1,13 @@
+---@meta UIImage
+---`UIImage` is an `Instance` for displaying images.
+---@class (exact) UIImage: UIField
+---Determines the `Color` of the `UIImage`.
+---@field Color Color
+---Determines the image ID of the `UIImage`.
+---@field ImageID integer
+---Determines the `ImageType` of the `ImageID`.
+---@field ImageType ImageType
+---Returns whether or not the image is loading.
+---@field Loading boolean
+---Determines whether the image is clickable.
+---@field Clickable boolean

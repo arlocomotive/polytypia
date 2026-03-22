@@ -1,0 +1,15 @@
+---@meta ImageSky
+---`ImageSky` is an `Instance` that is used to set a custom image skybox in the world. You can set the images used for the individual sides of the skybox by changing the ID properties. Any image from the library can be used for the skybox.
+---@class (exact) ImageSky: SkyBase
+---The image ID of the back side of the `ImageSky`.
+---@field BackId integer
+---The image ID of the bottom side of the `ImageSky`.
+---@field BottomId integer
+---The image ID of the front side of the `ImageSky`.
+---@field FrontId integer
+---The image ID of the left side of the `ImageSky`.
+---@field LeftId integer
+---The image ID of the right side of the `ImageSky`.
+---@field RightId integer
+---The image ID of the top side of the `ImageSky`.
+---@field TopId integer

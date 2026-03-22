@@ -1,0 +1,7 @@
+---@meta UIButton
+---`UIButton` is an `Instance` used for having interactable buttons.
+---@class (exact) UIButton: UILabel
+---Determines whether or not the `Player` can click on the `UIButton` and if the `Clicked` event will be fired.
+---@field Interactable boolean
+---Fires when the `UIButton` is clicked and `Interactable` is enabled
+---@field Clicked Event<fun()>

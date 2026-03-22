@@ -1,0 +1,3 @@
+---@meta LocalScript
+---`LocalScript`s run Lua code locally for each `Player`. It can only access what the client can access.
+---@class (exact) LocalScript: BaseScript

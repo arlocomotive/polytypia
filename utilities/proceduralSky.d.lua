@@ -1,0 +1,15 @@
+---@meta ProceduralSky
+---`ProceduralSky` is an `Instance` that is used to set a procedural skybox in the world.
+---@class (exact) ProceduralSky: SkyBase
+---Determines the size of the sun.
+---@field SunSize number
+---Determines the size convergence of the sun.
+---@field SunSizeConvergence number
+---Determines the thickness of the atmosphere.
+---@field AtmosphereThickness number
+---Determines the tint of the upper part of the `ProceduralSky`.
+---@field SkyTint Color
+---Determines the color of the lower part of the `ProceduralSky`.
+---@field GroundColor Color
+---Determines the exposure of the `ProceduralSky`.
+---@field Exposure number

@@ -1,0 +1,23 @@
+---@meta MeshPart
+---`MeshPart` is a `Part` that can have custom mesh applied to it, the mesh may be from the Polytoria Store (Hats, Tools and Heads) or user-uploaded meshes.
+---@class (exact) MeshPart: Part
+---The asset ID of the `MeshPart`.
+---@field AssetID integer
+---The current animation of the `MeshPart`.
+---@field CurrentAnimation string
+---Returns whether or not the `CurrentAnimation` is playing.
+---@field IsAnimationPlaying boolean
+---Determines whether or not to play the `CurrentAnimation` on start.
+---@field PlayAnimationOnStart boolean
+---Determines the `CollisionType` of the `MeshPart`.
+---@field CollisionType CollisionType
+---Plays the animation with the specified `animationName`, if it exists.
+---@field PlayAnimation fun(self: MeshPart, animationName: string, objectPath: string?, speed: number?, loop: boolean?)
+---Stops playing the current animation.
+---@field StopAnimation fun(self: MeshPart, name: string?)
+---Returns the names of the animations associated with the `MeshPart`.
+---@field GetAnimations fun(self: MeshPart): string[]
+---Unknown.
+---@field GetAnimationSources fun(self: MeshPart): string[]
+---Unknown.
+---@field GetAnimationInfo fun(self: MeshPart): AnimationInfo[]

@@ -1,0 +1,9 @@
+---@meta ModuleScript
+---<b>`ModuleScript` is currently in BETA and its behaviour may change at any point, so use it at your own risk.</b>
+---
+---`ModuleScript`s aren `BaseScript`s specialized to hold data that can be accessed by any other `BaseScript`s using the `require` function.
+---
+---It is important to define and return a table in a `ModuleScript`. When the place starts, the server and the client will run the `ModuleScript` once and store the result for other scripts to retrieve with `require`.
+---
+---Polytoria's script run order prioritizes `ModuleScript`s.
+---@class (exact) ModuleScript: BaseScript

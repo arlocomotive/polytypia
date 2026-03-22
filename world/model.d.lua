@@ -1,0 +1,3 @@
+---@meta Model
+---`Model`s are used for storing `Instance`s in the world, also transforming its `DynamicInstance` children.
+---@class (exact) Model: DynamicInstance

@@ -1,0 +1,3 @@
+---@meta Truss
+---`Truss`es are `Part`s the `Player` can climb on.
+---@class (exact) Truss: Climbable

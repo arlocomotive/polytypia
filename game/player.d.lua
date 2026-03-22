@@ -1,0 +1,92 @@
+---@meta Player
+---`Player` is the class of the `Player` and its character.
+---@class (exact) Player: DynamicInstance
+---Determines whether or not the `Player` is anchored. The idle animation still plays and this property does not reset on `Respawned`.
+---@field Anchored boolean
+---Determines whether or not the `Player` can move.
+---@field CanMove boolean
+---Determines the `Player`'s username color in the chat.
+---@field ChatColor Color
+---Determines the ID of the shirt the `Player` is wearing.
+---@field ShirtID integer
+---Determines the ID of the pants the `Player` is wearing.
+---@field PantsID integer
+---Determines the ID of the face the `Player` is wearing.
+---@field FaceID integer
+---Determines the color of the `Player`'s head.
+---@field HeadColor Color
+---Determines the current health of the `Player`.
+---@field Health number
+---Returns whether or not the `Player` is a Polytoria admin.
+---@field IsAdmin boolean
+---Returns whether or not the `Player` is the creator of the current place.
+---@field IsCreator boolean
+---Determines whether or not the `Player` is currently focused on an input.
+---
+---@deprecated Use `Input.IsInputFocused` instead.
+---@field IsInputFocused boolean
+---Determines how high the `Player`'s jump is.
+---@field JumpPower number
+---Determines the color of the `Player`'s left arm.
+---@field LeftArmColor Color
+---Determines the color of the `Player`'s left leg.
+---@field LeftLegColor Color
+---Determines the maximum `Health` the `Player` can have.
+---@field MaxHealth number
+---Determines the maximum `Stamina` the `Player` can have.
+---@field MaxStamina number
+---Determines how long it takes between the `Player`'s death and respawn.
+---@field RespawnTime number
+---Determines the color of the `Player`'s right arm.
+---@field RightArmColor Color
+---Determines the color of the `Player`'s right leg.
+---@field RightLegColor Color
+---Returns the `Seat` the `Player` is currently sitting in.
+---@field SittingIn Seat?
+---Determines how fast the `Player` is while sprinting.
+---
+---Sprinting can be disabled by setting the `Player`'s `SprintSpeed` to their `WalkSpeed`.
+---@field SprintSpeed number
+---The `Player`'s current amount of stamina.
+---@field Stamina number
+---Determines whether or not stamina drain is enabled for the `Player`.
+---@field StaminaEnabled boolean
+---The rate at which `Stamina` regenerates after being depleted for the `Player`.
+---@field StaminaRegen number
+---Determines the color of the `Player`'s torso.
+---@field TorsoColor Color
+---Returns the `Player`'s user ID.
+---@field UserID integer
+---Determines how fast the `Player` walks.
+---@field WalkSpeed number
+---Determines the velocity of the `Player`.
+---@field Velocity Vector3
+---@field ["Backpack"] Backpack
+---Fires when the `Player` sends a chat message. You can prevent other `Player`s from seeing the chat message by setting the `event`'s `Canceled` property to false.
+---@field Chatted Event<fun(message: string, event: {Player: Player, message: string, Canceled: boolean})>
+---Fires when the `Player` dies.
+---@field Died Event<fun()>
+---Fires when the `Player` respawns.
+---@field Respawned Event<fun()>
+---Drops the `Tool` the `Player` is currently holding.
+---@field DropTools fun(self: Player)
+---Kicks the `Player` from the server with an optional `Reason` parameter.
+---@field Kick fun(self: Player, Reason: string?)
+---Loads the specified `userID`'s avatar on the `Player`.
+---@field LoadAppearance fun(self: Player, userID: integer)
+---Clears the `Player`'s appearance. This will set its appearance to a gray avatar.
+---@field ClearAppearance fun(self: Player)
+---Checks if the `Player` owns an item.
+---
+---The function will cache the result for 5 minutes.
+---
+---There is a limit of 30 requests that can be made per minute per server.
+---@field OwnsItem fun(self: Player, assetID: integer, callback: fun(error: string, owns: boolean))
+---Resets the `Player`'s appearance to their original appearance.
+---@field ResetAppearance fun(self: Player)
+---Respawns the `Player`.
+---@field Respawn fun(self: Player)
+---Sits the `Player` in a specific `Seat`.
+---@field Sit fun(self: Player, Seat: Seat)
+---Unsits the `Player`.
+---@field Unsit fun(self: Player, addForce: boolean?)

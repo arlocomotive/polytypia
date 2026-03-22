@@ -1,0 +1,17 @@
+---@meta Text3D
+---`Text3D` allows for placement of text in the world.
+---@class (exact) Text3D: DynamicInstance
+---Determines the `Color` of the text.
+---@field Color Color
+---Determines whether or not the text should be facing the `Camera` or not.
+---@field FaceCamera boolean
+---Determines the font of the text.
+---@field Font TextFontPreset
+---Determines the size of the font.
+---@field FontSize number
+---Determines the horizontal alignment of the text.
+---@field HorizontalAlignment HorizontalAlignment
+---Determines the text to display.
+---@field Text string
+---Determines the vertical alignment of the text.
+---@field VerticalAlignment VerticalAlignment

@@ -1,0 +1,27 @@
+---@meta GradientSky
+---`GradientSky` is an `Instance` that is used to set a gradient skybox in the world.
+---@class (exact) GradientSky: SkyBase
+---Determines the horizon line's color.
+---@field HorizonLineColor Color
+---Determines the horizon line's exponent.
+---@field HorizonLineExponent number
+---Determines how much the horizon line contributes to the `GradientSky`.
+---@field HorizonLineContribution number
+---Determines the top color of the `GradientSky`.
+---@field SkyGradientTop Color
+---Determines the bottom color of the `GradientSky`.
+---@field SkyGradientBottom Color
+---Determines the `GradientSky`'s gradient exponent.
+---@field SkyGradientExponent integer
+---Determines the color emitting off the sun.
+---@field SunDiscColor Color
+---Determines the multiplier of the sun.
+---@field SunDiscMultiplier number
+---Determines the exponent of the sun.
+---@field SunDiscExponent number
+---Determines the color of the sun halo.
+---@field SunHaloColor Color
+---Determines the exponent of the sun halo.
+---@field SunHaloExponent number
+---Determines the contribution of the sun halo.
+---@field SunHaloContribution number

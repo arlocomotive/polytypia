@@ -1,0 +1,5 @@
+---@meta GUI
+---`GUI` is an `Instance` that is used to create a GUI.
+---@class (exact) GUI: Instance
+---Determines whether the `GUI` is visible or not.
+---@field Visible boolean

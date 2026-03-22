@@ -1,0 +1,44 @@
+---@meta NetMessage
+---`NetMessage` is a data type used for transporting data between the server and client when using `NetworkEvent`.
+---@class (exact) NetMessage
+---Sets the value of the given `key` to the given `value`.
+---
+---Adding a string longer than 65,535 characters will cause the `NetMessage` to be silently dropped during transmission, and the `NetworkEvent` will not be fired on the other side. If you need to send a large string, consider sending it in smaller chunks.
+---@field AddString fun(self: NetMessage, key: string, value: string)
+---Gets the value of the given `key`.
+---@field GetString fun(self: NetMessage, key: string): string
+---Sets the value of the given `key` to the given `value`.
+---@field AddInt fun(self: NetMessage, key: string, value: integer)
+---Gets the value of the given `key`.
+---@field GetInt fun(self: NetMessage, key: string): integer
+---Sets the value of the given `key` to the given `value`.
+---@field AddNumber fun(self: NetMessage, key: string, value: number)
+---Gets the value of the given `key`.
+---@field GetNumber fun(self: NetMessage, key: string): number
+---Sets the value of the given `key` to the given `value`.
+---@field AddBool fun(self: NetMessage, key: string, value: boolean)
+---Gets the value of the given `key`.
+---@field GetBool fun(self: NetMessage, key: string): boolean
+---Sets the value of the given `key` to the given `value`.
+---@field AddVector2 fun(self: NetMessage, key: string, value: Vector2)
+---Gets the value of the given `key`.
+---@field GetVector2 fun(self: NetMessage, key: string): Vector2
+---Sets the value of the given `key` to the given `value`.
+---@field AddVector3 fun(self: NetMessage, key: string, value: Vector3)
+---Gets the value of the given `key`.
+---@field GetVector3 fun(self: NetMessage, key: string): Vector3
+---Sets the value of the given `key` to the given `value`.
+---@field AddColor fun(self: NetMessage, key: string, value: Color)
+---Gets the value of the given `key`.
+---@field GetColor fun(self: NetMessage, key: string): Color
+---Sets the value of the given `key` to the given `value`.
+---@field AddInstance fun(self: NetMessage, key: string, value: Instance)
+---Gets the value of the given `key`.
+---@field GetInstance fun(self: NetMessage, key: string): Instance
+
+---`NetMessage` is a data type used for transporting data between the server and client when using `NetworkEvent`.
+NetMessage = {}
+
+---Creates a new `NetMessage`.
+---@return NetMessage
+function NetMessage.New() end

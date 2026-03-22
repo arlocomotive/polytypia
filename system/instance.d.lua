@@ -1,0 +1,180 @@
+---@meta Instance
+---@alias ClassName "Game" | "Environment" | "Lighting" | "Camera" | "Player" | "ScriptService" | "Hidden" | "ServerHidden" | "PlayerDefaults" | "Players" | "Backpack" | "Part" | "MeshPart" | "Seat" | "Text3D" | "NPC" | "Model" | "Tool" | "Truss" | "Climbable" | "Folder" | "Decal" | "GradientSky" | "ImageSky" | "ProceduralSky" | "BaseSky" | "Particles" | "PointLight" | "SpotLight" | "SunLight" | "Sound" | "BodyPosition" | "ScriptInstance" | "LocalScript" | "ModuleScript" | "BaseScript" | "NetworkEvent" | "BoolValue" | "ColorValue" | "InstanceValue" | "IntValue" | "NumberValue" | "StringValue" | "Vector3Value" | "ValueBase" | "Instance" | "DynamicInstance" | "GUI" | "PlayerGUI" | "UIButton" | "UIField" | "UIHVLayout" | "UIImage" | "UILabel" | "UITextInput" | "UIHorizontalLayout" | "UIVerticalLayout" | "UIView" 
+---`Instance` is the base class of all classes. Every class derives from it and has all properties, events and functions `Instance` has.
+---@class (exact) Instance
+---Returns whether this `Instance` can be reparented/deleted or not.
+---@field CanReparent boolean
+---Returns the name of the class.
+---@field ClassName string
+---Specifies the name of an `Instance`.
+---@field Name string
+---Specifies the parent `Instance` of an `Instance`.
+---@field Parent Instance
+---An empty table you can use to hold metadata about anything on any `Instance` you want.
+---
+---Changes do not sync from the client to the server, or from the server to the client.
+---@field Shared {}
+---Returns whether or not the `Instance` was spawned by the client.
+---@field ClientSpawned boolean
+---Fires when a child `Instance` is added.
+---@field ChildAdded Event<fun(child: Instance)>
+---Fires when a child `Instance` is removed.
+---@field ChildRemoved Event<fun(child: Instance)>
+---Fires when the `Instance` is clicked by a `Player`.
+---@field Clicked Event<fun(player: Player)>
+---Fires when the mouse enters the `Instance`.
+---@field MouseEnter Event<fun()>
+---Fires when the mouse exits the `Instance`.
+---@field MouseExit Event<fun()>
+---Fires when the `Instance` was touched by another `Instance`. If you are trying to detect a `Player` touching the `Instance`, make sure to check `otherPart:IsA("Player")` before continuing. Also, it's recommended to apply a debounce variable to the function.
+---
+---There must be an active collider on the `Instance` for this event to trigger (`Part`, `Player`, etc.)
+---@field Touched Event<fun(otherPart: Instance)>
+---Fires when the `Instance` is no longer being touched by another `Instance`.
+---
+---There must be an active collider on the `Instance` for this event to trigger (`Part`, `Player`, etc.)
+---@field TouchEnded Event<fun(otherPart: Instance)>
+---Clones the `Instance`.
+---@field Clone fun(self: Instance): Instance
+---Destroys the `Instance`. Same as `Delete`.
+---@field Destroy fun(self: Instance, delay: number?)
+---Deletes the `Instance`. Same as `Destroy`.
+---@field Delete fun(self: Instance, delay: number?)
+---Returns the `Parent` of the `Instance`. Same as getting `Parent`.
+---@field GetParent fun(self: Instance): Instance?
+---Sets the `Parent` of the `Instance`. Same as setting `Parent`.
+---@field SetParent fun(self: Instance, newParent: Instance?)
+---Returns whether or not the `Instance` is the specified `className`.
+---@field IsA fun(self: Instance, className: ClassName): boolean
+---Returns whether or not the `Instance` is a descendant (child, child of child, etc) of the specified `other`.
+---@field IsDescendantOf fun(self: Instance, other: Instance): boolean
+---Attempts to find the first child `Instance` with the specified `name`.
+---@field FindChild fun(self: Instance, name: string): Instance?
+---Attempts to find the first child `Instance` with the specified `className`.
+---@field FindChildByClass fun(self: Instance, className: ClassName): Instance?
+---@field FindChildByClass fun(self: Instance, className: "Part"): Part?
+---@field FindChildByClass fun(self: Instance, className: "MeshPart"): MeshPart?
+---@field FindChildByClass fun(self: Instance, className: "Seat"): Seat?
+---@field FindChildByClass fun(self: Instance, className: "Text3D"): Text3D?
+---@field FindChildByClass fun(self: Instance, className: "NPC"): NPC?
+---@field FindChildByClass fun(self: Instance, className: "Model"): Model?
+---@field FindChildByClass fun(self: Instance, className: "Tool"): Tool?
+---@field FindChildByClass fun(self: Instance, className: "Truss"): Truss?
+---@field FindChildByClass fun(self: Instance, className: "Folder"): Folder?
+---@field FindChildByClass fun(self: Instance, className: "Decal"): Decal?
+---@field FindChildByClass fun(self: Instance, className: "GradientSky"): GradientSky?
+---@field FindChildByClass fun(self: Instance, className: "ImageSky"): ImageSky?
+---@field FindChildByClass fun(self: Instance, className: "ProceduralSky"): ProceduralSky?
+---@field FindChildByClass fun(self: Instance, className: "Particles"): Particles?
+---@field FindChildByClass fun(self: Instance, className: "PointLight"): PointLight?
+---@field FindChildByClass fun(self: Instance, className: "SpotLight"): SpotLight?
+---@field FindChildByClass fun(self: Instance, className: "Sound"): Sound?
+---@field FindChildByClass fun(self: Instance, className: "BodyPosition"): BodyPosition?
+---@field FindChildByClass fun(self: Instance, className: "ScriptInstance"): ScriptInstance?
+---@field FindChildByClass fun(self: Instance, className: "LocalScript"): LocalScript?
+---@field FindChildByClass fun(self: Instance, className: "ModuleScript"): ModuleScript?
+---@field FindChildByClass fun(self: Instance, className: "NetworkEvent"): NetworkEvent?
+---@field FindChildByClass fun(self: Instance, className: "BoolValue"): BoolValue?
+---@field FindChildByClass fun(self: Instance, className: "ColorValue"): ColorValue?
+---@field FindChildByClass fun(self: Instance, className: "InstanceValue"): InstanceValue?
+---@field FindChildByClass fun(self: Instance, className: "IntValue"): IntValue?
+---@field FindChildByClass fun(self: Instance, className: "NumberValue"): NumberValue?
+---@field FindChildByClass fun(self: Instance, className: "StringValue"): StringValue?
+---@field FindChildByClass fun(self: Instance, className: "Vector3Value"): Vector3Value?
+---@field FindChildByClass fun(self: Instance, className: "GUI"): GUI?
+---@field FindChildByClass fun(self: Instance, className: "UIButton"): UIButton?
+---@field FindChildByClass fun(self: Instance, className: "UIField"): UIField?
+---@field FindChildByClass fun(self: Instance, className: "UIImage"): UIImage?
+---@field FindChildByClass fun(self: Instance, className: "UITextInput"): UITextInput?
+---@field FindChildByClass fun(self: Instance, className: "UIHorizontalLayout"): UIHorizontalLayout?
+---@field FindChildByClass fun(self: Instance, className: "UIVerticalLayout"): UIVerticalLayout?
+---@field FindChildByClass fun(self: Instance, className: "UIView"): UIView?
+---Returns an array of all the children `Instance`s parented to the `Instance`.
+---@field GetChildren fun(self: Instance): Instance[]
+---Returns an array of all the children `Instance`s with the specified `className`.
+---@field GetChildrenOfClass fun(self: Instance, className: ClassName): Instance[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Part"): Part[]
+---@field GetChildrenOfClass fun(self: Instance, className: "MeshPart"): MeshPart[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Seat"): Seat[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Text3D"): Text3D[]
+---@field GetChildrenOfClass fun(self: Instance, className: "NPC"): NPC[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Model"): Model[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Tool"): Tool[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Truss"): Truss[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Folder"): Folder[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Decal"): Decal[]
+---@field GetChildrenOfClass fun(self: Instance, className: "GradientSky"): GradientSky[]
+---@field GetChildrenOfClass fun(self: Instance, className: "ImageSky"): ImageSky[]
+---@field GetChildrenOfClass fun(self: Instance, className: "ProceduralSky"): ProceduralSky[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Particles"): Particles[]
+---@field GetChildrenOfClass fun(self: Instance, className: "PointLight"): PointLight[]
+---@field GetChildrenOfClass fun(self: Instance, className: "SpotLight"): SpotLight[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Sound"): Sound[]
+---@field GetChildrenOfClass fun(self: Instance, className: "BodyPosition"): BodyPosition[]
+---@field GetChildrenOfClass fun(self: Instance, className: "ScriptInstance"): ScriptInstance[]
+---@field GetChildrenOfClass fun(self: Instance, className: "LocalScript"): LocalScript[]
+---@field GetChildrenOfClass fun(self: Instance, className: "ModuleScript"): ModuleScript[]
+---@field GetChildrenOfClass fun(self: Instance, className: "NetworkEvent"): NetworkEvent[]
+---@field GetChildrenOfClass fun(self: Instance, className: "BoolValue"): BoolValue[]
+---@field GetChildrenOfClass fun(self: Instance, className: "ColorValue"): ColorValue[]
+---@field GetChildrenOfClass fun(self: Instance, className: "InstanceValue"): InstanceValue[]
+---@field GetChildrenOfClass fun(self: Instance, className: "IntValue"): IntValue[]
+---@field GetChildrenOfClass fun(self: Instance, className: "NumberValue"): NumberValue[]
+---@field GetChildrenOfClass fun(self: Instance, className: "StringValue"): StringValue[]
+---@field GetChildrenOfClass fun(self: Instance, className: "Vector3Value"): Vector3Value[]
+---@field GetChildrenOfClass fun(self: Instance, className: "GUI"): GUI[]
+---@field GetChildrenOfClass fun(self: Instance, className: "UIButton"): UIButton[]
+---@field GetChildrenOfClass fun(self: Instance, className: "UIField"): UIField[]
+---@field GetChildrenOfClass fun(self: Instance, className: "UIImage"): UIImage[]
+---@field GetChildrenOfClass fun(self: Instance, className: "UITextInput"): UITextInput[]
+---@field GetChildrenOfClass fun(self: Instance, className: "UIHorizontalLayout"): UIHorizontalLayout[]
+---@field GetChildrenOfClass fun(self: Instance, className: "UIVerticalLayout"): UIVerticalLayout[]
+---@field GetChildrenOfClass fun(self: Instance, className: "UIView"): UIView[]
+---Returns the `Bounds` of the `Instance`.
+---@field GetBounds fun(self: Instance): Bounds
+---@field [string] Instance
+
+Instance = {}
+
+---Creates a new `Instance`.
+---@param typeOfInstance ClassName
+---@param parent Instance?
+---@return Instance
+---@overload fun(typeOfInstance: "Part", parent: Instance?): Part
+---@overload fun(typeOfInstance: "MeshPart", parent: Instance?): MeshPart
+---@overload fun(typeOfInstance: "Seat", parent: Instance?): Seat
+---@overload fun(typeOfInstance: "Text3D", parent: Instance?): Text3D
+---@overload fun(typeOfInstance: "NPC", parent: Instance?): NPC
+---@overload fun(typeOfInstance: "Model", parent: Instance?): Model
+---@overload fun(typeOfInstance: "Tool", parent: Instance?): Tool
+---@overload fun(typeOfInstance: "Truss", parent: Instance?): Truss
+---@overload fun(typeOfInstance: "Folder", parent: Instance?): Folder
+---@overload fun(typeOfInstance: "Decal", parent: Instance?): Decal
+---@overload fun(typeOfInstance: "GradientSky", parent: Instance?): GradientSky
+---@overload fun(typeOfInstance: "ImageSky", parent: Instance?): ImageSky
+---@overload fun(typeOfInstance: "ProceduralSky", parent: Instance?): ProceduralSky
+---@overload fun(typeOfInstance: "Particles", parent: Instance?): Particles
+---@overload fun(typeOfInstance: "PointLight", parent: Instance?): PointLight
+---@overload fun(typeOfInstance: "SpotLight", parent: Instance?): SpotLight
+---@overload fun(typeOfInstance: "Sound", parent: Instance?): Sound
+---@overload fun(typeOfInstance: "BodyPosition", parent: Instance?): BodyPosition
+---@overload fun(typeOfInstance: "ScriptInstance", parent: Instance?): ScriptInstance
+---@overload fun(typeOfInstance: "LocalScript", parent: Instance?): LocalScript
+---@overload fun(typeOfInstance: "ModuleScript", parent: Instance?): ModuleScript
+---@overload fun(typeOfInstance: "NetworkEvent", parent: Instance?): NetworkEvent
+---@overload fun(typeOfInstance: "BoolValue", parent: Instance?): BoolValue
+---@overload fun(typeOfInstance: "ColorValue", parent: Instance?): ColorValue
+---@overload fun(typeOfInstance: "InstanceValue", parent: Instance?): InstanceValue
+---@overload fun(typeOfInstance: "IntValue", parent: Instance?): IntValue
+---@overload fun(typeOfInstance: "NumberValue", parent: Instance?): NumberValue
+---@overload fun(typeOfInstance: "StringValue", parent: Instance?): StringValue
+---@overload fun(typeOfInstance: "Vector3Value", parent: Instance?): Vector3Value
+---@overload fun(typeOfInstance: "GUI", parent: Instance?): GUI
+---@overload fun(typeOfInstance: "UIButton", parent: Instance?): UIButton
+---@overload fun(typeOfInstance: "UIField", parent: Instance?): UIField
+---@overload fun(typeOfInstance: "UIImage", parent: Instance?): UIImage
+---@overload fun(typeOfInstance: "UITextInput", parent: Instance?): UITextInput
+---@overload fun(typeOfInstance: "UIHorizontalLayout", parent: Instance?): UIHorizontalLayout
+---@overload fun(typeOfInstance: "UIVerticalLayout", parent: Instance?): UIVerticalLayout
+---@overload fun(typeOfInstance: "UIView", parent: Instance?): UIView
+function Instance.New(typeOfInstance, parent) end

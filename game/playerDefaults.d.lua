@@ -1,0 +1,27 @@
+---@meta PlayerDefaults
+---`PlayerDefaults` is a service used for storing the default values of the `Player` when created.
+---@class (exact) PlayerDefaults: Instance
+---Determines the default `ChatColor` of the `Player`.
+---@field ChatColor Color
+---Determines the default `JumpPower` of the `Player`.
+---@field JumpPower number
+---Determines the default `MaxHealth` of the `Player`.
+---@field MaxHealth number
+---Determines the default `MaxStamina` of the `Player`.
+---@field MaxStamina number
+---Determines the default `RespawnTime` of the `Player`.
+---@field RespawnTime number
+---Determines the default `SprintSpeed` of the `Player`.
+---@field SprintSpeed number
+---Determines the default `Stamina` of the `Player`.
+---@field Stamina number
+---Determines the default `StaminaEnabled` of the `Player`.
+---@field StaminaEnabled boolean
+---Determines the default `StaminaRegen` of the `Player`.
+---@field StaminaRegen number
+---Determines the default `WalkSpeed` of the `Player`.
+---@field WalkSpeed number
+---Stores the `Tool`s that will be copied into the `Backpack` of the `Player`.
+---@field ["Backpack"] Backpack
+---Resets the specified `player` back to their default values.
+---@field LoadDefaults fun(self: PlayerDefaults, player: Player)

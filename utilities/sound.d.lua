@@ -1,0 +1,33 @@
+---@meta Sound
+---`Sound`s are `DynamicInstance`s that can be placed in the world and emit audio.
+---@class (exact) Sound: DynamicInstance
+---Determines whether the `Sound` should start playing automatically.
+---@field Autoplay boolean
+---Returns whether or not the `Sound` is loading.
+---@field Loading boolean
+---Returns the length of the currently loaded audio.
+---@field Length boolean
+---Determines whether the `Sound` should loop or not.
+---@field Loop boolean
+---Determines the pitch of the `Sound`.
+---@field Pitch number
+---Determines whether the sound should be played in 3D world space or have the same volume for everyone.
+---@field PlayInWorld boolean
+---Determines how far the `Player` must be from the `Sound` for it to stop playing, if `PlayInWorld` is enabled.
+---@field MaxDistance number
+---Determines whether the `Sound` is currently playing or not.
+---@field Playing boolean
+---Determines the asset ID of the `Sound`.
+---@field SoundID integer
+---Determines the time position of the `Sound`.
+---@field Time number
+---Determines the volume of the `Sound`.
+---@field Volume number
+---Fires when the `Sound` is loaded from the server.
+---@field Loaded Event<fun()>
+---Plays the `Sound`.
+---@field Play fun(self: Sound)
+---Plays the `Sound` once, able to be ran in rapid succession without stopping existing playback.
+---@field PlayOneShot fun(self: Sound, volume: number)
+---Stops playing the `Sound`.
+---@field Stop fun(self: Sound, volume: number)

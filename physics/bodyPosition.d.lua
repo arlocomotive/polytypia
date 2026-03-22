@@ -1,0 +1,9 @@
+---@meta BodyPosition
+---`BodyPosition` are `Instance`s that apply a force to their `Parent` towards their `TargetPosition`.
+---@class (exact) BodyPosition: Instance
+---Determines how close the `Parent` has to be to the `TargetPosition` to stop applying forces to it.
+---@field AcceptanceDistance number
+---Determines how much force the `BodyPosition` applies.
+---@field Force number
+---Determines the target position that the `BodyPosition` applies forces to get to.
+---@field TargetPosition Vector3

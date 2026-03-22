@@ -1,0 +1,3 @@
+---@meta SkyBase
+---`SkyBase` is the base `Instance` of all sky `Instance`s.
+---@class (exact) SkyBase: Instance

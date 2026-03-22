@@ -1,0 +1,3 @@
+---@meta BoolValue
+---`BoolValue` is a `ValueBase` that stores a `boolean`.
+---@class (exact) BoolValue: ValueBase<boolean>

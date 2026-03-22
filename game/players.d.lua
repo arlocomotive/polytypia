@@ -1,0 +1,19 @@
+---@meta Players
+---`Players` is the container class for all `Player`s.
+---@class (exact) Players: Instance
+---Returns the local `Player` currently playing.
+---
+---This is only available to the client. It can only be accessed within `LocalScript`s.
+---@field LocalPlayer Player
+---Determines whether or not collisions between players are enabled.
+---@field PlayerCollisionEnabled boolean
+---Fires when a player joins the server.
+---@field PlayerAdded Event<fun(player: Player)>
+---Fires when a player leaves the server.
+---@field PlayerRemoved Event<fun(player: Player)>
+---Attempts to find the first `Player` with the specified `username`.
+---@field GetPlayer fun(username: string): Player?
+---Attempts to find the first `Player` with the specified `userID`.
+---@field GetPlayer fun(userID: integer): Player?
+---Returns an array of all the `Player`s in the world.
+---@field GetPlayers fun(): Player[]

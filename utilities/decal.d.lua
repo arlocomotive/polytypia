@@ -1,0 +1,15 @@
+---@meta Decal
+---`Decal`s are `DynamicInstance`s that can have an image texture and are placed in the world.
+---@class (exact) Decal: DynamicInstance
+---Determines the `Color` of the `Decal`.
+---@field Color Color
+---Determines the `ImageType` of the `ImageID`.
+---@field ImageType ImageType
+---Determines the image ID of the `UIImage`.
+---@field ImageID integer
+---Determines the offset of the `Decal`'s texture.
+---@field TextureOffset Vector2
+---Determines the scale of the `Decal`'s texture.
+---@field TextureScale Vector2
+---Determines whether or not the `Decal` should cast shadows.
+---@field CastShadows boolean

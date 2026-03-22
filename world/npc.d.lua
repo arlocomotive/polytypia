@@ -1,0 +1,59 @@
+---@meta NPC
+---`NPC` (non-player character) is a `DynamicInstance` similar to a `Player` but that can be controlled by code. Like `Player`s, it can walk and jump, and its body part colors can be customized.
+---@class (exact) NPC: DynamicInstance
+---Determines whether or not the `NPC` is anchored.
+---@field Anchored boolean
+---Determines the ID of the face the `NPC` is wearing.
+---@field FaceID integer
+---Returns true if the `NPC` is currently standing on the ground.
+---@field Grounded boolean
+---Determines the color of the `NPC`'s head.
+---@field HeadColor Color
+---Determines the current health of the `NPC`.
+---@field Health number
+---Determines the instance the NPC should walk towards.
+---@field MoveTarget Instance
+---Determines how fast the `NPC` walks.
+---@field WalkSpeed number
+---Determines how high the `NPC`'s jump is.
+---@field JumpPower number
+---Determines the maximum `Health` the `NPC` can have.
+---@field MaxHealth number
+---Determines the ID of the shirt the `NPC` is wearing.
+---@field ShirtID integer
+---Determines the ID of the pants the `NPC` is wearing.
+---@field PantsID integer
+---Determines the color of the `NPC`'s torso.
+---@field TorsoColor Color
+---Determines the color of the `NPC`'s left arm.
+---@field LeftArmColor Color
+---Determines the color of the `NPC`'s right arm.
+---@field RightArmColor Color
+---Determines the color of the `NPC`'s left leg.
+---@field LeftLegColor Color
+---Determines the color of the `NPC`'s right leg.
+---@field RightLegColor Color
+---Returns the remaining distance before the `NPC` reaches the end of its pathfind.
+---@field NavDestinationDistance number
+---Returns whether or not the `NPC` has a valid path to its set destination.
+---@field NavDestinationValid boolean
+---Returns whether or not the `NPC` has reached the end of its pathfind.
+---@field NavDestinationReached boolean
+---Determines the velocity of the `NPC`.
+---@field Velocity Vector3
+---Fires when the `NPC` dies.
+---@field Died Event<fun()>
+---Loads the specified `userID`'s avatar on the `NPC`.
+---@field LoadAppearance fun(self: NPC, userID: integer)
+---Clears the `NPC`'s appearance. This will set its appearance to a gray avatar.
+---@field ClearAppearance fun(self: NPC)
+---Sets the destination for the `NPC`'s pathfind to `position`.
+---@field SetNavDestination fun(self: NPC, position: Vector3)
+---Respawns the `NPC`.
+---@field Respawn fun(self: NPC)
+---Makes the `NPC` jump.
+---@field Jump fun(self: NPC)
+---Equips the specified `tool` on the `NPC`.
+---@field EquipTool fun(self: NPC, tool: Tool)
+---Drops the `Tool` currently equipped on the `NPC`.
+---@field DropTool fun(self: NPC)

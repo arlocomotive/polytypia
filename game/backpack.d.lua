@@ -1,0 +1,3 @@
+---@meta Backpack
+---`Backpack` is an `Instance` used for storing `Tool`s.
+---@class (exact) Backpack: Instance

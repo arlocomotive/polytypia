@@ -1,0 +1,3 @@
+---@meta UIHorizontalLayout
+---`UIHorizontalLayout` is an `Instance` that aligns all of its children horizontally.
+---@class (exact) UIHorizontalLayout: UIHVLayout

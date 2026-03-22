@@ -1,0 +1,3 @@
+---@meta NumberValue
+---`NumberValue` is a `ValueBase` that stores a `number`.
+---@class (exact) NumberValue: ValueBase<number>

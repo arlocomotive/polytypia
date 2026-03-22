@@ -1,0 +1,3 @@
+---@meta Folder
+---`Folder`s are used for storing `Instance`s in the world.
+---@class (exact) Folder: Instance

@@ -1,0 +1,3 @@
+---@meta Vector3Value
+---`Vector3Value` is a `ValueBase` that stores an `Vector3`.
+---@class (exact) Vector3Value: ValueBase<Vector3>

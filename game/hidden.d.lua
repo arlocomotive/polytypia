@@ -1,0 +1,3 @@
+---@meta Hidden
+---`Hidden` is a service used for hiding `Instance`s.
+---@class (exact) Hidden: Instance

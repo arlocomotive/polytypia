@@ -1,0 +1,3 @@
+---@meta StringValue
+---`StringValue` is a `ValueBase` that stores a `string`.
+---@class (exact) StringValue: ValueBase<string>

@@ -1,0 +1,15 @@
+---@meta Lighting
+---`Lighting` is responsible for controlling the state of the lighting in the place. It provides many different options for creators to enhance and fine-tune the visuals of their worlds.
+---@class (exact) Lighting: Instance
+---Determines the color of the ambient light. Ambient light is light that is not coming from any particular direction, and is used to simulate light bouncing off of surfaces.
+---
+---This property is only used if `AmbientSource` is set to `AmbientSource.AmbientColor`.
+---@field AmbientColor Color
+---Determines the source of the ambient light.
+---@field AmbientSource AmbientSource
+---Determines the brightness of the sun.
+---@field SunBrightness number
+---Determines the color of the sun. This affects the color of the ambient lighting.
+---@field SunColor Color
+---Determines whether or not shadows are enabled.
+---@field Shadows boolean

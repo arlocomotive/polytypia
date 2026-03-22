@@ -1,0 +1,3 @@
+---@meta ScriptInstance
+---`ScriptInstance`s run Lua code on the server. Any code that should be kept on the server, such as Datastores, should be kept in a `ScriptInstance`.
+---@class (exact) ScriptInstance: BaseScript

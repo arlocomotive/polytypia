@@ -1,0 +1,23 @@
+---@meta UIField
+---`UIField` is the base `Instance` of all `UI` `Instance`s.
+---@class (exact) UIField: Instance
+---Determines the pivot point of the `UIField`.
+---@field PivotPoint Vector2
+---Determines the offset of the `UIField` in pixels.
+---@field PositionOffset Vector2
+---Determines the offset of the `UIField` relative to its `Parent`.
+---@field PositionRelative Vector2
+---Determines the rotation of the `UIField`.
+---@field Rotation number
+---Determines the size of the `UIField` in pixels.
+---@field SizeOffset Vector2
+---Determines the size of the `UIField` relative to its `Parent`.
+---@field SizeRelative Vector2
+---Determines whether the `UIField` is visible or not.
+---@field Visible boolean
+---Determines whether the `UIField` clips its descendants.
+---@field ClipDescendants boolean
+---Fires when the mouse clicks on the `UIField`.
+---@field MouseDown Event<fun()>
+---Fires when the mouse releases click on the `UIField`.
+---@field MouseUp Event<fun()>

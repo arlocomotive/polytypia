@@ -1,0 +1,49 @@
+---@meta Part
+---`Part`s are physical objects that can be placed in the world.
+---@class (exact) Part: DynamicInstance
+---Moves the `Part` to the specified `position` while keeping physics in mind.
+---@field MovePosition fun(self: Part, position: Vector3)
+---Rotates the `Part` while keeping physics in mind.
+---@field MoveRotation fun(self: Part, rotation: Vector3)
+---Adds a `force` to the `Part`.
+---@field AddForce fun(self: Part, force: Vector3, mode: ForceMode)
+---Adds a `torque` to the `Part`.
+---@field AddTorque fun(self: Part, torque: Vector3, mode: ForceMode)
+---Adds a `force` to the `Part` at a specific `position`.
+---@field AddForceAtPosition fun(self: Part, force: Vector3, position: Vector3, mode: ForceMode)
+---Adds a `force` to the `Part` relative to its own `Rotation`.
+---@field AddRelativeForce fun(self: Part, force: Vector3, mode: ForceMode)
+---Adds a `torque` to the `Part` relative to its own `Rotation`.
+---@field AddRelativeTorque fun(self: Part, torque: Vector3, mode: ForceMode)
+---Determines whether the `Part` is to be affected by physics or not.
+---@field Anchored boolean
+---Determines the angular drag (air resistance) of this `Part`.
+---@field AngularDrag number
+---Determines the angular velocity of the `Part`.
+---@field AngularVelocity Vector3
+---Determines how bouncy the `Part` is when `Player`s land on it.
+---@field Bounciness number
+---Determines whether the `Part` can be collided with or not.
+---@field CanCollide boolean
+---Determines whether the `Part` casts its shadow on other `Part`s.
+---@field CastShadows boolean
+---Determines the `Color` of the `Part`.
+---@field Color Color
+---Determines drag (air resistance) of this `Part`.
+---@field Drag number
+---Determines the amount of friction between the `Part` and `Player`s on it.
+---@field Friction number
+---Determines whether to display studs on the `Part` or not.
+---@field HideStuds boolean
+---Determines whether the `Part` can be used as a spawn location or not.
+---@field IsSpawn boolean
+---Determines the mass of the `Part` in kilograms.
+---@field Mass number
+---Determines the `PartMaterial` of the `Part`.
+---@field Material PartMaterial
+---Determines the `PartShape` of the `Part`.
+---@field Shape PartShape
+---Determines whether the `Part` is affected by gravity or not.
+---@field UseGravity boolean
+---Determines the velocity of the `Part`.
+---@field Velocity Vector3

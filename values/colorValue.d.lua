@@ -1,0 +1,3 @@
+---@meta ColorValue
+---`ColorValue` is a `ValueBase` that stores a `Color`.
+---@class (exact) ColorValue: ValueBase<Color>

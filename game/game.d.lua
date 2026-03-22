@@ -1,0 +1,30 @@
+---@meta Game
+---`Game` is the root `Instance` in the Polytoria `Instance` tree. It is the `Instance` from which everything is descended.
+---@class (exact) Game: Instance
+---The ID of the current Polytoria place.
+---
+---The value is 0 when testing locally through Polytoria Creator, which can be used as a conditional to check if the place is live or not.
+---@field GameID number
+---The total number of `Instance`s currently loaded.
+---
+---The value will differ depending on if it is being accessed through a `ScriptInstance` or a `LocalScript`, as `LocalScript`s can only see `Instance`s that are relevant to the client.
+---@field InstanceCount number
+---The number of `Instance`s currently loaded on the client.
+---@field LocalInstanceCount number
+---The number of `Player`s connected to the game.
+---@field PlayersConnected number
+---@field ["Environment"] Environment
+---@field ["Lighting"] Lighting
+---@field ["Players"] Players
+---@field ["ScriptService"] ScriptService
+---@field ["Hidden"] Hidden
+---@field ["ServerHidden"] ServerHidden
+---@field ["PlayerDefaults"] PlayerDefaults
+---@field ["PlayerGUI"] PlayerGUI
+---Fires every frame after the place has been rendered. The `deltaTime` parameter is the time between the last frame and the current.
+---
+---The server is incapable of rendering frames; rather, on server `ScriptInstance`s, the event will fire at the server's tick rate, which may vary between 1-30Hz.
+---
+---It is recommended to only listen to this event on `LocalScript`s.
+---@field Rendered Event<fun(deltaTime: number)>
+game = nil

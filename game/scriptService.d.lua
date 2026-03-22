@@ -1,0 +1,3 @@
+---@meta ScriptService
+---`ScriptService` is a service used for storing `BaseScript`s.
+---@class (exact) ScriptService: Instance

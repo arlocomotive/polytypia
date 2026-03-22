@@ -1,0 +1,7 @@
+---@meta ValueBase
+---`ValueBase` is the base `Instance` of all value `Instance`s.
+---@class (exact) ValueBase<T>: Instance
+---The value of the `ValueBase`.
+---@field Value T
+---Fires when the `Value` of the `ValueBase` changes.
+---@field Changed Event<fun()>

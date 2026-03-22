@@ -1,0 +1,10 @@
+---@meta RayResult
+---@class (exact) RayResult
+---The `Instance` hit by the raycast.
+---@field Instance Instance
+---The position the ray made contact at.
+---@field Position Vector3
+---The distance between the `Position` and origin.
+---@field Distance number
+---The normal of the surface the ray hit.
+---@field Normal Vector3

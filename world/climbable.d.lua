@@ -1,0 +1,5 @@
+---@meta Climbable
+---`Climbable`s are `Part`s the `Player` can climb on.
+---@class (exact) Climbable: Part
+---Determines how fast a player can climb the object.
+---@field ClimbSpeed number

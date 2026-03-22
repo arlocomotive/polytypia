@@ -1,0 +1,3 @@
+---@meta IntValue
+---`IntValue` is a `ValueBase` that stores an `integer`.
+---@class (exact) IntValue: ValueBase<integer>

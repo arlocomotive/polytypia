@@ -1,0 +1,9 @@
+---@meta SunLight
+---`SunLight` is the sun light in the world.
+---@class (exact) SunLight: DynamicInstance
+---Determines how bright/intense the `SunLight` is.
+---@field Brightness number
+---Determines the color of the `SunLight`.
+---@field Color Color
+---Determines whether the `SunLight` casts shadows or not.
+---@field Shadows boolean

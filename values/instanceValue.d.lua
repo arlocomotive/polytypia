@@ -1,0 +1,3 @@
+---@meta InstanceValue
+---`InstanceValue` is a `ValueBase` that stores an `Instance`.
+---@class (exact) InstanceValue: ValueBase<Instance>
