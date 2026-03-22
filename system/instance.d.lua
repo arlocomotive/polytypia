@@ -15,7 +15,7 @@
 ---An empty table you can use to hold metadata about anything on any `Instance` you want.
 ---
 ---Changes do not sync from the client to the server, or from the server to the client.
----@field Shared {}
+---@field Shared table
 ---Returns whether or not the `Instance` was spawned by the client.
 ---@field ClientSpawned boolean
 ---Fires when a child `Instance` is added.
