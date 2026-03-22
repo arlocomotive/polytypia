@@ -1,6 +1,9 @@
 ---@meta BaseScript
 ---`ScriptInstance`s run Lua code and are the base class of all script types. They can be parented to any `Instance`.
 ---@class (exact) BaseScript: Instance
+---Use bracket notation (`Object["Key"]`) if you are trying to access global variables or children.
+---
+---TODO type this in a way that won't make MoonSharp freak out.
 ---@field [string] any
 ---Calls the global function named the given `functionName` on a `BaseScript`.
 ---

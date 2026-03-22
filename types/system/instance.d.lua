@@ -178,6 +178,9 @@
 ---@field GetChildrenOfClass fun(self: Instance, className: "Climbable"): Climbable[]
 ---Returns the `Bounds` of the `Instance`.
 ---@field GetBounds fun(self: Instance): Bounds
+---Use bracket notation (`Object["Key"]`) if you are trying to access children.
+---
+---TODO type this in a way that won't make MoonSharp freak out.
 ---@field [string] Instance
 
 Instance = {}

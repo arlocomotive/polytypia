@@ -1,12 +1,14 @@
 ---@meta
 
 ---Runs the given `callback` in a separate thread without yielding the current thread.
----@param callback fun()
+---@param callback function
 function spawn(callback) end
 
 ---Yields the current thread until the given `seconds` have elapsed.
+---
+---TODO what does this return??? It's not the waited time in seconds.
 ---@param seconds number?
----@return number timeYielded
+---@return number
 function wait(seconds) end
 
 ---Returns the elapsed time in seconds since the current game started running.
@@ -18,7 +20,7 @@ function time() end
 ---The local `Player`'s `Camera`.
 Camera = nil
 
----`Vector4`, `Vector3`, `Vector2` can be coerced into each other implicitly.
+---`Vector4`, `Vector3`, and `Vector2` can be coerced into each other implicitly.
 ---
 ---TODO find a better way to do this, this is a temporary solution for some `Input` functions
 ---@alias AnyVector Vector4 | Vector3 | Vector2
