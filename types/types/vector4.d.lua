@@ -2,19 +2,19 @@
 ---`Vector4` is a 4D vector with X, Y, Z and W components.
 ---@class (exact) Vector4
 ---The X component of the `Vector4`.
----@field X number
+---@field x number
 ---The X component of the `Vector4`.
 ---@field [0] number
 ---The Y component of the `Vector4`.
----@field Y number
+---@field y number
 ---The Y component of the `Vector4`.
 ---@field [1] number
 ---The Z component of the `Vector4`.
----@field Z number
+---@field z number
 ---The Z component of the `Vector4`.
 ---@field [2] number
 ---The W component of the `Vector4`.
----@field W number
+---@field w number
 ---The W component of the `Vector4`.
 ---@field [3] number
 ---The length of the `Vector4`.

@@ -2,11 +2,11 @@
 ---`Vector2` is a 2D vector with X and Y components.
 ---@class (exact) Vector2
 ---The X component of the `Vector2`.
----@field X number
+---@field x number
 ---The X component of the `Vector2`.
 ---@field [0] number
 ---The Y component of the `Vector2`.
----@field Y number
+---@field y number
 ---The Y component of the `Vector2`.
 ---@field [1] number
 ---The length of the `Vector2`.

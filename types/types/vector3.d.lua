@@ -2,15 +2,15 @@
 ---`Vector3` is a 3D vector with X, Y and Z components.
 ---@class (exact) Vector3
 ---The X component of the `Vector3`.
----@field X number
+---@field x number
 ---The X component of the `Vector3`.
 ---@field [0] number
 ---The Y component of the `Vector3`.
----@field Y number
+---@field y number
 ---The Y component of the `Vector3`.
 ---@field [1] number
 ---The Z component of the `Vector3`.
----@field Z number
+---@field z number
 ---The Z component of the `Vector3`.
 ---@field [2] number
 ---The length of the `Vector3`.
