@@ -33,8 +33,6 @@
 ---@field Drag number
 ---Determines the amount of friction between the `Part` and `Player`s on it.
 ---@field Friction number
----Determines whether to display studs on the `Part` or not.
----@field HideStuds boolean
 ---Determines whether the `Part` can be used as a spawn location or not.
 ---@field IsSpawn boolean
 ---Determines the mass of the `Part` in kilograms.
