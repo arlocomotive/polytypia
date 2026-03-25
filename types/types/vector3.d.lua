@@ -166,9 +166,9 @@ function Vector3.SlerpUnclamped(a, b, t) end
 ---Returns `current` gradually changed towards `target` over time.
 ---@param current Vector3 The initial `Vector3`.
 ---@param target Vector3 The `Vector3` to move towards.
----@param currentVelocity Vector3 The initial velocity. This value is modified by the function each time it runs in the Update function. Pass this parameter as a reference value. ???
+---@param currentVelocity Vector3 The initial velocity. This value is modified by the function each time it runs in the Update function. Pass this parameter as a reference value. TODO make this doc a little less weird
 ---@param smoothTime number Approximately the time it will take to reach the target. A smaller value will reach the target faster.
 ---@param maxSpeed number? The maximum speed to reach in the motion. By default, there is no maximum speed.
----@param deltaTime number? The time between calls to this function. The default value is Time.deltaTime, such that SmoothDamp is called once per frame. ???
+---@param deltaTime number? The time between calls to this function. The default value is Time.deltaTime, such that SmoothDamp is called once per frame. TODO make this doc a little less weird
 ---@return Vector3
 function Vector3.SmoothDamp(current, target, currentVelocity, smoothTime, maxSpeed, deltaTime) end

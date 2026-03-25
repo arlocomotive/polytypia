@@ -4,5 +4,5 @@ Insert = {}
 
 ---Inserts the specified `modelID` into the game, with an optional callback for when the model successfully loads.
 ---@param modelID integer
----@param callback function?
+---@param callback fun(model: Instance)
 function Insert:Model(modelID, callback) end

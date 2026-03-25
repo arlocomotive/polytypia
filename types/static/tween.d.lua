@@ -7,8 +7,8 @@ Tween = {}
 ---@param endValue Color
 ---@param time number
 ---@param stepCallback fun(value: Color)
----@param type TweenType
----@param finishCallback fun()
+---@param type TweenType?
+---@param finishCallback fun()?
 ---@return integer tweenID
 function Tween:TweenColor(startValue, endValue, time, stepCallback, type, finishCallback) end
 
@@ -17,8 +17,8 @@ function Tween:TweenColor(startValue, endValue, time, stepCallback, type, finish
 ---@param endValue number
 ---@param time number
 ---@param stepCallback fun(value: number)
----@param type TweenType
----@param finishCallback fun()
+---@param type TweenType?
+---@param finishCallback fun()?
 ---@return integer tweenID
 function Tween:TweenNumber(startValue, endValue, time, stepCallback, type, finishCallback) end
 
@@ -26,8 +26,8 @@ function Tween:TweenNumber(startValue, endValue, time, stepCallback, type, finis
 ---@param target DynamicInstance
 ---@param destination Vector3
 ---@param time number
----@param type TweenType
----@param finishCallback fun()
+---@param type TweenType?
+---@param finishCallback fun()?
 ---@return integer tweenID
 function Tween:TweenPosition(target, destination, time, type, finishCallback) end
 
@@ -35,8 +35,8 @@ function Tween:TweenPosition(target, destination, time, type, finishCallback) en
 ---@param target DynamicInstance
 ---@param destination Vector3
 ---@param time number
----@param type TweenType
----@param finishCallback fun()
+---@param type TweenType?
+---@param finishCallback fun()?
 ---@return integer tweenID
 function Tween:TweenRotation(target, destination, time, type, finishCallback) end
 
@@ -44,8 +44,8 @@ function Tween:TweenRotation(target, destination, time, type, finishCallback) en
 ---@param target DynamicInstance
 ---@param destination Vector3
 ---@param time number
----@param type TweenType
----@param finishCallback fun()
+---@param type TweenType?
+---@param finishCallback fun()?
 ---@return integer tweenID
 function Tween:TweenSize(target, destination, time, type, finishCallback) end
 
@@ -54,8 +54,8 @@ function Tween:TweenSize(target, destination, time, type, finishCallback) end
 ---@param endValue Vector2
 ---@param time number
 ---@param stepCallback fun(value: Vector2)
----@param type TweenType
----@param finishCallback fun()
+---@param type TweenType?
+---@param finishCallback fun()?
 ---@return integer tweenID
 function Tween:TweenVector2(startValue, endValue, time, stepCallback, type, finishCallback) end
 
@@ -64,11 +64,29 @@ function Tween:TweenVector2(startValue, endValue, time, stepCallback, type, fini
 ---@param endValue Vector3
 ---@param time number
 ---@param stepCallback fun(value: Vector3)
----@param type TweenType
----@param finishCallback fun()
+---@param type TweenType?
+---@param finishCallback fun()?
 ---@return integer tweenID
 function Tween:TweenVector3(startValue, endValue, time, stepCallback, type, finishCallback) end
 
 ---Cancels the tween with the given `tweenID`.
 ---@param tweenID integer
-function Tween:Cancel(tweenID) end
+---@param callFinishCallbacks boolean?
+function Tween:Cancel(tweenID, callFinishCallbacks) end
+
+---Cancels all tweens.
+---@param callFinishCallbacks boolean?
+function Tween:CancelAll(callFinishCallbacks) end
+
+---Pauses the tween with the given `tweenID`.
+---@param tweenID integer
+function Tween:Pause(tweenID) end
+
+---Resumes the tween with the given `tweenID`.
+---@param tweenID integer
+function Tween:Resume(tweenID) end
+
+---Returns whether or not the tween with the given `tweenID` is paused.
+---@param tweenID integer
+---@return boolean isPaused
+function Tween:IsPaused(tweenID) end

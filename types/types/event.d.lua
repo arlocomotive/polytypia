@@ -1,7 +1,7 @@
 ---@meta Event
 ---`Event` is a data type that represents listenable events. You aren't able to create your own listenable events using this data type.
 ---@class (exact) Event<T>
----Connect the given `function` to the `Event`. When the `Event` is fired, the function will be ran. The `Event` parameters may be passed to the function, if there are any.
----@field Connect fun(self: Event, function: T)
----Disconnect the given `function` from the event.
----@field Disconnect fun(self: Event, function: T)
+---Connect the given `callback` to the `Event`. When the `Event` is fired, `callback` will be ran. The `Event`'s parameters may be passed to `callback`, if there are any.
+---@field Connect fun(self: Event, callback: T)
+---Disconnect the given `callback` from the `Event`.
+---@field Disconnect fun(self: Event, callback: T)

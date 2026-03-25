@@ -6,15 +6,15 @@
 ---Rotates the `Part` while keeping physics in mind.
 ---@field MoveRotation fun(self: Part, rotation: Vector3)
 ---Adds a `force` to the `Part`.
----@field AddForce fun(self: Part, force: Vector3, mode: ForceMode)
+---@field AddForce fun(self: Part, force: Vector3, mode: ForceMode?)
 ---Adds a `torque` to the `Part`.
----@field AddTorque fun(self: Part, torque: Vector3, mode: ForceMode)
+---@field AddTorque fun(self: Part, torque: Vector3, mode: ForceMode?)
 ---Adds a `force` to the `Part` at a specific `position`.
----@field AddForceAtPosition fun(self: Part, force: Vector3, position: Vector3, mode: ForceMode)
+---@field AddForceAtPosition fun(self: Part, force: Vector3, position: Vector3, mode: ForceMode?)
 ---Adds a `force` to the `Part` relative to its own `Rotation`.
----@field AddRelativeForce fun(self: Part, force: Vector3, mode: ForceMode)
+---@field AddRelativeForce fun(self: Part, force: Vector3, mode: ForceMode?)
 ---Adds a `torque` to the `Part` relative to its own `Rotation`.
----@field AddRelativeTorque fun(self: Part, torque: Vector3, mode: ForceMode)
+---@field AddRelativeTorque fun(self: Part, torque: Vector3, mode: ForceMode?)
 ---Determines whether the `Part` is to be affected by physics or not.
 ---@field Anchored boolean
 ---Determines the angular drag (air resistance) of this `Part`.

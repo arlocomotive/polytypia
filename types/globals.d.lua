@@ -1,12 +1,14 @@
 ---@meta
 
 ---Runs the given `callback` in a separate thread without yielding the current thread.
----@param callback function
+---@param callback fun()
 function spawn(callback) end
 
 ---Yields the current thread until the given `seconds` have elapsed.
 ---
----TODO what does this return??? It's not the waited time in seconds.
+---Note that this does not work as expected in a `coroutine`. It will `coroutine.yield` the given `seconds` and not actually wait.
+---
+---TODO figure out what this returns, seems to be the current time?
 ---@param seconds number?
 ---@return number
 function wait(seconds) end
@@ -22,7 +24,7 @@ Camera = nil
 
 ---`Vector4`, `Vector3`, and `Vector2` can be coerced into each other implicitly.
 ---
----TODO find a better way to do this, this is a temporary solution for some `Input` functions
+---TODO find a better way to do this, this is a temporary solution for some `Input` methods
 ---@alias AnyVector Vector4 | Vector3 | Vector2
 
 ---@type fun(deltaTime: number)?
