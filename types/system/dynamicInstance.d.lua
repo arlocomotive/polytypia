@@ -28,8 +28,8 @@
 ---The local `Quaternion` of this `DynamicInstance`.
 ---@field LocalQuaternion Quaternion
 ---Rotates the `DynamicInstance` so that `Forward` looks at the target.
----@field LookAt fun(self: DynamicInstance, rotation: Vector3)
----@field LookAt fun(self: DynamicInstance, rotation: Vector3, worldUp: Vector3)
+---@field LookAt fun(self: DynamicInstance, target: Vector3)
+---@field LookAt fun(self: DynamicInstance, target: Vector3, worldUp: Vector3)
 ---@field LookAt fun(self: DynamicInstance, dynamicInstance: DynamicInstance)
 ---Moves the transform in the direction and distance of `translation`.
 ---@field Translate fun(self: DynamicInstance, translation: Vector3)
