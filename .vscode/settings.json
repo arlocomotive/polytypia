@@ -1,5 +1,6 @@
 {
   "Lua.workspace.library": [
-    "../types"
+    // Untested on Windows. If type definitions don't work on Windows, try using `\\` instead of `/`.
+    "${workspaceFolder}/types",
   ]
 }
