@@ -83,7 +83,7 @@ function Vector3.Dot(a, b) end
 ---Returns `a` and `b` linearly interpolated by `t`.
 ---@param a Vector3 Start value. This value is returned when `t` = 0.
 ---@param b Vector3 End value. This value is returned when `t` = 1.
----@param t number Value used to interpolate between `a` and `b`. Values greater than one are clamped to 1. Values less than zero are clamped to 0.
+---@param t number Value used to interpolate between `a` and `b`. Values greater than 1 are clamped to 1. Values less than 0 are clamped to 0.
 ---@return Vector3
 function Vector3.Lerp(a, b, t) end
 
@@ -152,7 +152,7 @@ function Vector3.SignedAngle(from, to, axis) end
 ---Returns `a` and `b` spherically interpolated by `t`.
 ---@param a Vector3 Start value. This value is returned when `t` = 0.
 ---@param b Vector3 End value. This value is returned when `t` = 1.
----@param t number Value used to interpolate between `a` and `b`. Values greater than one are clamped to 1. Values less than zero are clamped to 0.
+---@param t number Value used to interpolate between `a` and `b`. Values greater than 1 are clamped to 1. Values less than 0 are clamped to 0.
 ---@return Vector3
 function Vector3.Slerp(a, b, t) end
 

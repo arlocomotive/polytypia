@@ -15,7 +15,7 @@
 ---
 ---There is a limit placed on the `Datastore` functions per server instance. Requests that exceed this limit will be canceled and return an error. Read and write functions both have their own rate limit of `(30 + (10 * [number of players]))` requests per minute. This limit is reset every minute.
 ---
----You can create as many `Datastore`s as you want, however, each `Datastore` is limited to 65,535 bytes, and its key cannot be longer than 32 characters. Creating a `Datastore` will also count towards the rate limit.
+---You can create as many `Datastore`s as you want, however, each `Datastore` is limited to 65,535 bytes, and its key cannot be longer than 32 characters. Creating a `Datastore` will also count towards the rate limit. According to some light testing a friend of mine did, these documented limits are not actually too accurate, but it's probably best to try and follow them, since 2.0 may become more strict.
 ---
 ---If you are testing your place locally through Polytoria Creator, no requests will be made to the server and your data will not be saved after the session ends. You will need to upload your place to the website to test the requests.
 Datastore = {}

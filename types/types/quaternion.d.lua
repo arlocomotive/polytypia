@@ -2,16 +2,26 @@
 ---@class (exact) Quaternion
 ---The X component of the `Quaternion`.
 ---@field x number
+---The X component of the `Quaternion`.
+---@field [0] number
 ---The Y component of the `Quaternion`.
 ---@field y number
+---The Y component of the `Quaternion`.
+---@field [1] number
 ---The Z component of the `Quaternion`.
 ---@field z number
+---The Z component of the `Quaternion`.
+---@field [2] number
 ---The W component of the `Quaternion`.
 ---@field w number
+---The W component of the `Quaternion`.
+---@field [3] number
 ---Returns the euler angle representation of the `Quaternion`.
----@field eulerAngles Quaternion
+---@field eulerAngles Vector3
 ---Returns the `Quaternion` with a magnitude of 1.
 ---@field normalized Quaternion
+---@operator mul(Quaternion): Quaternion
+---@operator mul(Vector3): Quaternion
 
 Quaternion = {}
 
@@ -77,7 +87,7 @@ function Quaternion.Inverse(rotation) end
 ---Returns `a` and `b` linearly interpolated by `t`, then normalized.
 ---@param a Quaternion Start unit `Quaternion` value. This value is returned when `t` = 0.
 ---@param b Quaternion End unit `Quaternion` value. This value is returned when `t` = 1.
----@param t number Value used to interpolate between `a` and `b`. Values greater than one are clamped to 1. Values less than zero are clamped to 0.
+---@param t number Value used to interpolate between `a` and `b`. Values greater than 1 are clamped to 1. Values less than 0 are clamped to 0.
 ---@return Quaternion
 function Quaternion.Lerp(a, b, t) end
 
@@ -102,7 +112,7 @@ function Vector3.RotateTowards(from, to, maxDegreesDelta) end
 ---Returns `a` and `b` spherically interpolated by `t`.
 ---@param a Quaternion Start unit `Quaternion` value. This value is returned when `t` = 0.
 ---@param b Quaternion End unit `Quaternion` value. This value is returned when `t` = 1.
----@param t number Value used to interpolate between `a` and `b`. Values greater than one are clamped to 1. Values less than zero are clamped to 0.
+---@param t number Value used to interpolate between `a` and `b`. Values greater than 1 are clamped to 1. Values less than 0 are clamped to 0.
 ---@return Quaternion
 function Quaternion.Slerp(a, b, t) end
 

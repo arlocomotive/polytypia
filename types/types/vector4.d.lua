@@ -17,9 +17,9 @@
 ---@field w number
 ---The W component of the `Vector4`.
 ---@field [3] number
----The length of the `Vector4`.
+---Returns the length of the `Vector4`.
 ---@field magnitude number
----The squared length of the `Vector4`.
+---Returns the squared length of the `Vector4`.
 ---@field sqrMagnitude number
 ---Returns the `Vector4` with a `magnitude` of 1.
 ---@field normalized Vector4

@@ -62,8 +62,8 @@
 ---Determines the velocity of the `Player`.
 ---@field Velocity Vector3
 ---@field ["Backpack"] Backpack
----Fires when the `Player` sends a chat message. You can prevent other `Player`s from seeing the chat message by setting the `event`'s `Canceled` property to false.
----@field Chatted Event<fun(message: string, event: {Player: Player, message: string, Canceled: boolean})>
+---Fires when the `Player` sends a chat message. You can prevent other `Player`s from seeing the chat message by setting `event.Canceled` to `false`.
+---@field Chatted Event<fun(message: string, event: PlayerChatEvent)>
 ---Fires when the `Player` dies.
 ---@field Died Event<fun()>
 ---Fires when the `Player` respawns.
@@ -78,10 +78,8 @@
 ---@field ClearAppearance fun(self: Player)
 ---Checks if the `Player` owns an item.
 ---
----The function will cache the result for 5 minutes.
----
----There is a limit of 30 requests that can be made per minute per server.
----@field OwnsItem fun(self: Player, assetID: integer, callback: fun(error: string, owns: boolean))
+---The result is cached for 5 minutes. There is a limit of 30 requests that can be made per minute per server.
+---@field OwnsItem fun(self: Player, assetID: integer, callback: fun(errorMessage: string, ownsItem: boolean))
 ---Resets the `Player`'s appearance to their original appearance.
 ---@field ResetAppearance fun(self: Player)
 ---Respawns the `Player`.

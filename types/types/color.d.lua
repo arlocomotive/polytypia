@@ -1,25 +1,38 @@
 ---@meta Color
----Color is a data type that represents a color.
+---`Color` is a data type that represents a color.
 ---@class (exact) Color
----Red color component of the `Color`.
+---The red color component of the `Color`.
 ---@field r number
----Green color component of the `Color`.
+---The red color component of the `Color`.
+---@field [0] number
+---The green color component of the `Color`.
 ---@field g number
----Blue color component of the `Color`.
+---The green color component of the `Color`.
+---@field [1] number
+---The blue color component of the `Color`.
 ---@field b number
----Alpha (opacity) color component of the `Color`. 0 is fully transparent and 1 is fully visible.
+---The blue color component of the `Color`.
+---@field [2] number
+---The alpha (opacity) color component of the `Color`. 0 is fully transparent and 1 is fully visible.
 ---@field a number
+---The alpha (opacity) color component of the `Color`. 0 is fully transparent and 1 is fully visible.
+---@field [3] number
 ---Returns the `Color` with the gamma curve applied.
 ---@field gamma Color
 ---Returns the `Color` with the inverse of sRGB gamma curve applied.
 ---@field linear Color
 ---Returns the maximum color component of the `Color`. Includes `r`, `g`, and `b`, but not `a`.
 ---@field maxColorComponent number
+---@operator sub(Color): Color
+---@operator mul(Color): Color
+---@operator mul(number): Color
+---@operator div(number): Color
+---@operator add(Color): Color
 
 ---`Color` is a data type that represents a `Color`.
 Color = {}
 
----Creates a new black `Color`.
+---Creates a new opaque black `Color`.
 ---@return Color
 function Color.New() end
 
@@ -63,7 +76,7 @@ function Color.HSVToRGB(h, s, v, hdr) end
 ---Returns `a` and `b` linearly interpolated by `t`.
 ---@param a Color Start value. This value is returned when `t` = 0.
 ---@param b Color End value. This value is returned when `t` = 1.
----@param t number Value used to interpolate between `a` and `b`. Values greater than one are clamped to 1. Values less than zero are clamped to 0.
+---@param t number Value used to interpolate between `a` and `b`. Values greater than 1 are clamped to 1. Values less than zero are clamped to 0.
 ---@return Color
 function Color.Lerp(a, b, t) end
 

@@ -1,0 +1,8 @@
+---@meta PlayerChatEvent
+---@class (exact) PlayerChatEvent
+---Returns the `Player` who sent the message.
+---@field Player Player
+---Returns the message sent by the `Player`.
+---@field Message string
+---Determines whether the message will be canceled or not.
+---@field Canceled boolean
