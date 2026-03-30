@@ -13,3 +13,4 @@
 ---@field SunColor Color
 ---Determines whether or not shadows are enabled.
 ---@field Shadows boolean
+---@field ["SunLight"] SunLight
