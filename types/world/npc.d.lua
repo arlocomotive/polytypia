@@ -43,6 +43,12 @@
 ---@field Velocity Vector3
 ---Fires when the `NPC` dies.
 ---@field Died Event<fun()>
+---Undocumented.
+---@field AddClothing fun(self: NPC, id: integer)
+---Undocumented.
+---@field RemoveClothing fun(self: NPC, id: integer)
+---Undocumented.
+---@field ClearClothing fun(self: NPC)
 ---Loads the specified `userID`'s avatar on the `NPC`.
 ---@field LoadAppearance fun(self: NPC, userID: integer)
 ---Clears the `NPC`'s appearance. This will set its appearance to a gray avatar.

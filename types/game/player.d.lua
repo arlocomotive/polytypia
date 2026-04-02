@@ -62,6 +62,12 @@
 ---Determines the velocity of the `Player`.
 ---@field Velocity Vector3
 ---@field ["Backpack"] Backpack
+---Undocumented.
+---@field AddClothing fun(self: NPC, id: integer)
+---Undocumented.
+---@field RemoveClothing fun(self: NPC, id: integer)
+---Undocumented.
+---@field ClearClothing fun(self: NPC)
 ---Fires when the `Player` sends a chat message. You can prevent other `Player`s from seeing the chat message by setting `event.Canceled` to `false`.
 ---@field Chatted Event<fun(message: string, event: PlayerChatEvent)>
 ---Fires when the `Player` dies.
