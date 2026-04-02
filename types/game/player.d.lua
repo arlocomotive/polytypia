@@ -62,18 +62,18 @@
 ---Determines the velocity of the `Player`.
 ---@field Velocity Vector3
 ---@field ["Backpack"] Backpack
----Undocumented.
----@field AddClothing fun(self: NPC, id: integer)
----Undocumented.
----@field RemoveClothing fun(self: NPC, id: integer)
----Undocumented.
----@field ClearClothing fun(self: NPC)
 ---Fires when the `Player` sends a chat message. You can prevent other `Player`s from seeing the chat message by setting `event.Canceled` to `false`.
 ---@field Chatted Event<fun(message: string, event: PlayerChatEvent)>
 ---Fires when the `Player` dies.
 ---@field Died Event<fun()>
 ---Fires when the `Player` respawns.
 ---@field Respawned Event<fun()>
+---Undocumented.
+---@field AddClothing fun(self: Player, id: integer)
+---Undocumented.
+---@field RemoveClothing fun(self: Player, id: integer)
+---Undocumented.
+---@field ClearClothing fun(self: Player)
 ---Drops the `Tool` the `Player` is currently holding.
 ---@field DropTools fun(self: Player)
 ---Kicks the `Player` from the server with an optional `Reason` parameter.
