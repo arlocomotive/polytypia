@@ -1,6 +1,7 @@
 {
   "Lua.workspace.library": [
     // Untested on Windows. If type definitions don't work on Windows, try using `\\` instead of `/`.
-    "${workspaceFolder}/types",
-  ]
+    "${workspaceFolder}/types"
+  ],
+  "Lua.runtime.version": "Lua 5.2"
 }
