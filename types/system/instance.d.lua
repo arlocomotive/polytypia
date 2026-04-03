@@ -53,7 +53,7 @@
 ---Attempts to find the first child `Instance` with the specified `name`.
 ---@field FindChild fun(self: Instance, name: string): Instance?
 ---Attempts to find the first child `Instance` with the specified `className`.
----@field FindChildByClass fun(self: Instance, className: ClassName): Instance?
+---@field FindChildByClass fun(self: Instance, className: string): Instance?
 ---@field FindChildByClass fun(self: Instance, className: "BodyPosition"): BodyPosition?
 ---@field FindChildByClass fun(self: Instance, className: "BoolValue"): BoolValue?
 ---@field FindChildByClass fun(self: Instance, className: "ColorValue"): ColorValue?
@@ -116,7 +116,7 @@
 ---Returns an array of all the children `Instance`s parented to the `Instance`.
 ---@field GetChildren fun(self: Instance): Instance[]
 ---Returns an array of all the children `Instance`s with the specified `className`.
----@field GetChildrenOfClass fun(self: Instance, className: ClassName): Instance[]
+---@field GetChildrenOfClass fun(self: Instance, className: string): Instance[]
 ---@field GetChildrenOfClass fun(self: Instance, className: "BodyPosition"): BodyPosition[]
 ---@field GetChildrenOfClass fun(self: Instance, className: "BoolValue"): BoolValue[]
 ---@field GetChildrenOfClass fun(self: Instance, className: "ColorValue"): ColorValue[]
@@ -182,7 +182,7 @@
 Instance = {}
 
 ---Creates a new `Instance`.
----@param typeOfInstance InstantiatableClassName
+---@param typeOfInstance string
 ---@param parent Instance?
 ---@return Instance
 ---@overload fun(typeOfInstance: "BodyPosition", parent: Instance?): BodyPosition
