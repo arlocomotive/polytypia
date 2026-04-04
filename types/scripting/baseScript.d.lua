@@ -4,5 +4,5 @@
 ---Calls the global function named the given `functionName` on a `BaseScript`.
 ---
 ---Local functions cannot be ran using this method.
----@field Call fun(self: BaseScript, functionName: string, ...: any): ...: any
+---@field Call fun(self: BaseScript, functionName: string, ...: any)
 script = nil
