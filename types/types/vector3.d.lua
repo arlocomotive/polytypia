@@ -77,7 +77,7 @@ function Vector3.Distance(a, b) end
 ---Returns the dot product of `a` and `b`.
 ---@param a Vector3
 ---@param b Vector3
----@return Vector3
+---@return number
 function Vector3.Dot(a, b) end
 
 ---Returns `a` and `b` linearly interpolated by `t`.
