@@ -1,4 +1,8 @@
 ---@meta Input
+---@alias MouseButton
+---| 0 The left mouse button.
+---| 1 The right mouse button.
+---| 2 The middle mouse button.
 ---`Input` is a static class used for retrieving user input data, such as the mouse and keyboard.
 Input = {}
 
@@ -83,17 +87,17 @@ function Input:GetKeyDown(key) end
 function Input:GetKeyUp(key) end
 
 ---Returns whether or not the given `mouseButton` is currently being held down.
----@param mouseButton integer
+---@param mouseButton MouseButton
 ---@return boolean
 function Input:GetMouseButton(mouseButton) end
 
 ---Returns whether or not the given `mouseButton` was pressed this frame.
----@param mouseButton integer
+---@param mouseButton MouseButton
 ---@return boolean
 function Input:GetMouseButtonDown(mouseButton) end
 
 ---Returns whether or not the given `mouseButton` was released this frame.
----@param mouseButton integer
+---@param mouseButton MouseButton
 ---@return boolean
 function Input:GetMouseButtonUp(mouseButton) end
 
