@@ -1,20 +1,6 @@
 ---@meta Part
 ---`Part`s are physical objects that can be placed in the world.
 ---@class (exact) Part: DynamicInstance
----Moves the `Part` to the specified `position` while keeping physics in mind.
----@field MovePosition fun(self: Part, position: Vector3)
----Rotates the `Part` while keeping physics in mind.
----@field MoveRotation fun(self: Part, rotation: Vector3)
----Adds a `force` to the `Part`.
----@field AddForce fun(self: Part, force: Vector3, mode: ForceMode?)
----Adds a `torque` to the `Part`.
----@field AddTorque fun(self: Part, torque: Vector3, mode: ForceMode?)
----Adds a `force` to the `Part` at a specific `position`.
----@field AddForceAtPosition fun(self: Part, force: Vector3, position: Vector3, mode: ForceMode?)
----Adds a `force` to the `Part` relative to its own `Rotation`.
----@field AddRelativeForce fun(self: Part, force: Vector3, mode: ForceMode?)
----Adds a `torque` to the `Part` relative to its own `Rotation`.
----@field AddRelativeTorque fun(self: Part, torque: Vector3, mode: ForceMode?)
 ---Determines whether the `Part` is to be affected by physics or not.
 ---@field Anchored boolean
 ---Determines the angular drag (air resistance) of this `Part`.
@@ -45,3 +31,17 @@
 ---@field UseGravity boolean
 ---Determines the velocity of the `Part`.
 ---@field Velocity Vector3
+---Moves the `Part` to the given `position` with physics in mind.
+---@field MovePosition fun(self: Part, position: Vector3)
+---Rotates the `Part` by the given `rotation` with physics in mind.
+---@field MoveRotation fun(self: Part, rotation: Vector3)
+---Adds the given `force` to the `Part`.
+---@field AddForce fun(self: Part, force: Vector3, mode: ForceMode?)
+---Adds the given `torque` to the `Part`.
+---@field AddTorque fun(self: Part, torque: Vector3, mode: ForceMode?)
+---Adds the given `force` to the `Part` at the given `position`.
+---@field AddForceAtPosition fun(self: Part, force: Vector3, position: Vector3, mode: ForceMode?)
+---Adds the given `force` to the `Part` relative to its own `Rotation`.
+---@field AddRelativeForce fun(self: Part, force: Vector3, mode: ForceMode?)
+---Adds the given `torque` to the `Part` relative to its own `Rotation`.
+---@field AddRelativeTorque fun(self: Part, torque: Vector3, mode: ForceMode?)

@@ -1,35 +1,35 @@
 ---@meta Environment
 ---`Environment` is the primary object intended for storing active objects in the place.
 ---@class (exact) Environment: Instance
+---Determines the default `SkyboxPreset` to use for the world, if no `BaseSky` is present.
+---@field Skybox SkyboxPreset
+---Determines the direction and strength of gravity in the world.
+---@field Gravity Vector3
+---Determines whether or not fog is enabled.
+---@field FogEnabled boolean
+---Determines the distance from the `Camera` at which fog starts to appear.
+---@field FogStartDistance number
+---Determines the distance from the `Camera` at which fog is fully opaque.
+---@field FogEndDistance number
+---Determines the color of the fog.
+---@field FogColor Color
+---Determines the height at which unanchored `Part`s are destroyed and `Player`s are killed.
+---@field PartDestroyHeight number
 ---Determines whether or not to automatically build a navigation mesh for `NPC` pathfinding. This property is disabled by default so there are no performance issues with larger maps.
 ---
 ---When updating the map, even if the property is set to true, you will still have to manually call the `Environment:RebuildNavMesh()` method.
 ---@field AutoGenerateNavMesh boolean
----The color of the fog. Fog is a visual effect that makes the world look like it is covered in a colored mist.
----@field FogColor Color
----Whether or not fog is enabled.
----@field FogEnabled boolean
----The distance from the `Camera` at which fog starts to appear.
----@field FogStartDistance number
----The distance from the `Camera` at which fog is fully opaque.
----@field FogEndDistance number
----The direction and strength of gravity in the world.
----@field Gravity Vector3
----The height at which unanchored `Part`s are destroyed and `Player`s are killed when they fall below it.
----@field PartDestroyHeight number
----The default `SkyboxPreset` to use for the world, if no `ImageSky` is present.
----@field Skybox SkyboxPreset
 ---@field ["Camera"] Camera
----Creates a deadly explosion killing `Player`s and applying force to `Part`s at the given `Position`.
----@field CreateExplosion fun(self: Environment, Position: Vector3, Radius: number?, Force: number?, affectAnchored: boolean?, callback: fun(hit: Instance)?, damage: number?)
----Returns an array of `Instance`s intersecting with the box in the given `position`, `size` and `rotation`.
----@field OverlapBox fun(self: Environment, position: Vector3, size: Vector3, rotation: Vector3, ignoreList: Instance[]?): Instance[]
+---Creates a deadly explosion, killing `Player`s and applying force to `Part`s.
+---@field CreateExplosion fun(self: Environment, position: Vector3, radius: number?, force: number?, affectKinematic: boolean?, callback: fun(hit: Instance)?, damage: number?)
+---Casts a ray from the given `origin` with the given `direction` and returns a `RayResult` for the first hit `Instance`.
+---@field Raycast fun(self: Environment, origin: Vector3, direction: Vector3, maxDistance: number?, ignoreList: Instance[]?): RayResult?
+---Casts a ray from the given `origin` with the given `direction` and returns a `RayResult` array for all hit `Instance`s.
+---@field RaycastAll fun(self: Environment, origin: Vector3, direction: Vector3, maxDistance: number?, ignoreList: Instance[]?): RayResult[]
 ---Returns an array of `Instance`s intersecting with the sphere in the given `position` and `radius`.
 ---@field OverlapSphere fun(self: Environment, position: Vector3, radius: number, ignoreList: Instance[]?): Instance[]
----Casts a ray from `origin` with a specified `direction` and returns a `RayResult` for the first hit `Instance`.
----@field Raycast fun(self: Environment, origin: Vector3, direction: Vector3, maxDistance: number?, ignoreList: Instance[]?): RayResult?
----Casts a ray from `origin` with a specified `direction` and returns a `RayResult` array for all hit `Instance`s.
----@field RaycastAll fun(self: Environment, origin: Vector3, direction: Vector3, maxDistance: number?, ignoreList: Instance[]?): RayResult[]
+---Returns an array of `Instance`s intersecting with the box in the given `position`, `size` and `rotation`.
+---@field OverlapBox fun(self: Environment, position: Vector3, size: Vector3, rotation: Vector3, ignoreList: Instance[]?): Instance[]
 ---Rebuilds the navigation mesh which determines the empty space where `NPC`s can pathfind in.
 ---@field RebuildNavMesh fun(self: Environment, root: Instance?)
 ---Returns a point on the navigation mesh at the given `position`.

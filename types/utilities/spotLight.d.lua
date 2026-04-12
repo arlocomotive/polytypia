@@ -1,13 +1,13 @@
 ---@meta SpotLight
----`SpotLight` is a source of light emitting in a specific direction and angle that can be placed in the world.
+---`SpotLight` is a source of light emitting in a direction and angle that can be placed in the world.
 ---@class (exact) SpotLight: DynamicInstance
+---Determines the range of the `SpotLight`.
+---@field Range number
 ---Determines the angle of the `SpotLight`.
 ---@field Angle number
 ---Determines how bright/intense the `SpotLight` is.
 ---@field Brightness number
 ---Determines the color of the `SpotLight`.
 ---@field Color Color
----Determines the range of the `SpotLight`.
----@field Range number
 ---Determines whether the `SpotLight` casts shadows or not.
 ---@field Shadows boolean

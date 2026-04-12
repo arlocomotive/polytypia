@@ -6,10 +6,10 @@
 ---@field Loaded Event<fun()>
 ---Attempts to get the given `key` from the `Datastore`.
 ---@field Get fun(self: Datastore, key: string, callback: fun(value: any?, success: boolean, errorMessage: string?))
+---Attempts to set the given `key` from the `Datastore` to the given `value`.
+---@field Set fun(self: Datastore, key: string, value: any, callback: fun(success: boolean, errorMessage: string?))
 ---Attempts to remove the given `key` from the `Datastore`.
 ---@field Remove fun(self: Datastore, key: string, callback: fun(success: boolean, errorMessage: string?))
----Attempts to set the given `key` from the `Datastore` to the given `value`.
----@field Get fun(self: Datastore, key: string, value: any, callback: fun(success: boolean, errorMessage: string?))
 
 ---`Datastore` is a service used for storing data between place sessions.
 ---

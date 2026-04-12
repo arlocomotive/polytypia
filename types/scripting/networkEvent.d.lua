@@ -1,10 +1,10 @@
 ---@meta NetworkEvent
 ---`NetworkEvent`s are events that can be called to communicate between the server and clients. `NetMessage`s are the class used for sharing data between the server and client when sending `NetworkEvent`s.
 ---@class (exact) NetworkEvent: Instance
----Fires when the client receives a message from the server.
----@field InvokedClient Event<fun(sender: nil, netMessage: NetMessage)>
----Fires when the server receives a message from a client.
----@field InvokedServer Event<fun(sender: Player, netMessage: NetMessage)>
+---Fires when the client receives a `NetMessage` from the server.
+---@field InvokedClient Event<fun(sender: nil, message: NetMessage)>
+---Fires when the server receives a `NetMessage` from a client.
+---@field InvokedServer Event<fun(sender: Player, message: NetMessage)>
 ---Sends a `NetMessage` to the server from the client.
 ---@field InvokeServer fun(self: NetworkEvent, message: NetMessage)
 ---Sends a `NetMessage` to all clients from the server.

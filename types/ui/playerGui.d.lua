@@ -1,7 +1,7 @@
 ---@meta PlayerGUI
 ---`PlayerGUI` is an `Instance` that contains all custom `GUI`s.
 ---@class (exact) PlayerGUI: GUI
----Determines whether the `Player` can interact with the `GUI` or not.
----@field Interactable boolean
 ---Determines the opacity of the `PlayerGUI`
 ---@field Opacity number
+---Determines whether the `Player` can interact with the `GUI` or not.
+---@field Interactable boolean

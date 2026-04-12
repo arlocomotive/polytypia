@@ -1,19 +1,23 @@
 ---@meta UILabel
 ---`UILabel` is an `Instance` that can be used to display text.
 ---@class (exact) UILabel: UIView
----Determines whether the text should be automatically sized to fit the `UILabel`'s size.
----@field AutoSize boolean
----Determines the font of the `UILabel`.
----@field Font TextFontPreset
----Determines the font size of the `UILabel`.
----@field FontSize number
----Determines how the text is justified.
----@field JustifyText TextJustify
----Determines the maximum font size of the `UILabel` if `AutoSize` is enabled.
----@field MaxFontSize number
 ---Determines the text of the `UILabel`.
 ---@field Text string
 ---Determines the color of the text.
 ---@field TextColor Color
+---Determines how the text is justified.
+---@field JustifyText TextJustify
 ---Determines the vertical alignment of the text.
 ---@field VerticalAlign TextVerticalAlign
+---Determines the font size of the `UILabel`.
+---@field FontSize number
+---Determines the maximum font size of the `UILabel` if `AutoSize` is enabled.
+---@field MaxFontSize number
+---Determines whether the text should be automatically sized to fit the `UILabel`'s size.
+---@field AutoSize boolean
+---Determines the font of the `UILabel`.
+---@field Font TextFontPreset
+---Unknown.
+---@field OutlineColor Color
+---Unknown.
+---@field OutlineWidth number

@@ -1,29 +1,29 @@
 ---@meta UIHVLayout
 ---`UIHVLayout` is the base `Instance` of all UI layout elements.
 ---@class (exact) UIHVLayout: UIField
----Determines the alignment of the children.
----@field ChildAlignment TextAnchor
+---Determines the spacing between each child.
+---@field Spacing number
 ---Unknown.
----@field ChildControlHeight boolean
----Unknown.
----@field ChildControlWidth boolean
----Unknown.
----@field ChildForceExpandHeight boolean
----Unknown.
----@field ChildForceExpandWidth boolean
+---@field ChildScaleWidth boolean
 ---Unknown.
 ---@field ChildScaleHeight boolean
 ---Unknown.
----@field ChildScaleWidth boolean
----Determines the bottom padding of the `UIHVLayout`.
----@field PaddingBottom integer
+---@field ChildControlWidth boolean
+---Unknown.
+---@field ChildControlHeight boolean
+---Unknown.
+---@field ChildForceExpandWidth boolean
+---Unknown.
+---@field ChildForceExpandHeight boolean
 ---Determines the left padding of the `UIHVLayout`.
 ---@field PaddingLeft integer
 ---Determines the right padding of the `UIHVLayout`.
 ---@field PaddingRight integer
 ---Determines the top padding of the `UIHVLayout`.
 ---@field PaddingTop integer
+---Determines the bottom padding of the `UIHVLayout`.
+---@field PaddingBottom integer
+---Determines the alignment of the children.
+---@field ChildAlignment TextAnchor
 ---Determines whether or not the alignment of the children should be reversed.
 ---@field ReverseAlignment boolean
----Determines the spacing between each child.
----@field Spacing number

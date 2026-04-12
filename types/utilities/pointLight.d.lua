@@ -1,11 +1,11 @@
 ---@meta PointLight
 ---`PointLight` is a source of light that can be placed in the world.
 ---@class (exact) PointLight: DynamicInstance
+---Determines the range of the `PointLight`.
+---@field Range number
 ---Determines how bright/intense the `PointLight` is.
 ---@field Brightness number
 ---Determines the color of the `PointLight`.
 ---@field Color Color
----Determines the range of the `PointLight`.
----@field Range number
 ---Determines whether the `PointLight` casts shadows or not.
 ---@field Shadows boolean

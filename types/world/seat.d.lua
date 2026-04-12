@@ -3,7 +3,7 @@
 ---@class (exact) Seat: Part
 ---The `Player` that is currently sitting in this `Seat`.
 ---@field Occupant Player?
----Fires when the `player` sits in the `Seat`.
+---Fires when a `Player` sits in the `Seat`.
 ---@field Sat Event<fun(player: Player)>
----Fires when the `player` leaves the `Seat`.
+---Fires when a `Player` leaves the `Seat`.
 ---@field Vacated Event<fun(player: Player)>

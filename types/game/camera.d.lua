@@ -1,45 +1,45 @@
 ---@meta Camera
 ---`Camera` is a class that represents the `Player`'s camera.
 ---@class (exact) Camera: DynamicInstance
----Determines the distance between the `Camera` and the `Player` when `Mode` is `CameraMode.FollowPlayer`.
----@field Distance number
----Determines the `Camera`'s field of view.
----@field FOV number
----Determines the `Camera` flying speed while holding shift when `Mode` is `CameraMode.FreeCam`.
----@field FastFlySpeed number
----Determines the `Camera` flying speed when `Mode` is `CameraMode.FreeCam`.
----@field FlySpeed number
----Determines whether or not the `Camera`'s `Position` should be lerped when `Mode` is `CameraMode.FollowPlayer`.
----@field FollowLerp boolean
----Determines the mouse sensitivity of the `Camera` when `Mode` is `CameraMode.FreeCam`.
----@field FreeLookSensitivity number
----Determines the horizontal movement speed of the `Camera` when `Mode` is `CameraMode.FollowPlayer`.
----@field HorizontalSpeed number
----Returns whether or not the `Camera` is in first person when `Mode`.
----@field IsFirstPerson boolean
----Determines the lerp speed of the `Camera` when `FollowLerp` is enabled.
----@field LerpSpeed number
----Determines the `Camera`'s maximum `Distance` from the `Player` when `Mode` is `CameraMode.FollowPlayer`.
----@field MaxDistance number
----Determines the `Camera`'s minimum `Distance` from the `Player` when `Mode` is `CameraMode.FollowPlayer`.
----@field MinDistance number
 ---Determines the `Camera`'s current `CameraMode`.
 ---@field Mode CameraMode
+---Determines the `Camera`'s field of view.
+---@field FOV number
 ---Determines whether the `Camera` should render in orthographic (2D) mode or perspective mode (3D).
 ---@field Orthographic boolean
 ---Determines the half-size of the `Camera` when `Orthographic` is enabled.
 ---@field OrthographicSize number
+---Determines the distance between the `Camera` and the `Player` when `Mode` is `CameraMode.FollowPlayer`.
+---@field Distance number
+---Determines the `Camera`'s minimum `Distance` from the `Player` when `Mode` is `CameraMode.FollowPlayer`.
+---@field MinDistance number
+---Determines the `Camera`'s maximum `Distance` from the `Player` when `Mode` is `CameraMode.FollowPlayer`.
+---@field MaxDistance number
+---Determines the horizontal movement speed of the `Camera` when `Mode` is `CameraMode.FollowPlayer`.
+---@field HorizontalSpeed number
+---Determines the vertical move speed of the `Camera` when `Mode` is `CameraMode.FollowPlayer`.
+---@field VerticalSpeed number
+---Determines the scroll move speed of the `Camera` when `Mode` is `CameraMode.FollowPlayer`.
+---@field ScrollSensitivity number
+---Determines whether or not the `Camera` should clip through walls.
+---@field ClipThroughWalls boolean
+---Determines the `Camera` flying speed when `Mode` is `CameraMode.FreeCam`.
+---@field FlySpeed number
+---Determines the `Camera` flying speed while holding shift when `Mode` is `CameraMode.FreeCam`.
+---@field FastFlySpeed number
+---Determines the mouse sensitivity of the `Camera` when `Mode` is `CameraMode.FreeCam`.
+---@field FreeLookSensitivity number
+---Determines the lerp speed of the `Camera` when `FollowLerp` is enabled.
+---@field LerpSpeed number
+---Determines whether or not the `Camera`'s `Position` should be lerped when `Mode` is `CameraMode.FollowPlayer`.
+---@field FollowLerp boolean
+---Determines the multiplier for `HorizontalSpeed` and `VerticalSpeed`.
+---@field SensitivityMultiplier number
 ---Determines the `Camera`'s offset from its `Position`.
 ---@field PositionOffset Vector3
 ---Determines the `Camera`'s offset from its `Rotation`.
 ---@field RotationOffset Vector3
----Determines the scroll move speed of the `Camera` when `Mode` is `CameraMode.FollowPlayer`.
----@field ScrollSensitivity number
----Determines the vertical move speed of the `Camera` when `Mode` is `CameraMode.FollowPlayer`.
----@field VerticalSpeed number
----Determines whether or not the `Camera` should clip through walls.
----@field ClipThroughWalls boolean
----Determines the multiplier for `HorizontalSpeed` and `VerticalSpeed`.
----@field SensitivityMultiplier number
+---Returns whether or not the `Camera` is in first person.
+---@field IsFirstPerson boolean
 ---Determines what `DynamicInstance` to follow when `Mode` is set to `CameraMode.FollowTarget`.
 ---@field FollowTarget DynamicInstance

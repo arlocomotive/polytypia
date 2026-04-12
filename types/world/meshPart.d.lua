@@ -9,9 +9,9 @@
 ---@field IsAnimationPlaying boolean
 ---Determines whether or not to play the `CurrentAnimation` on start.
 ---@field PlayAnimationOnStart boolean
----Determines the `CollisionType` of the `MeshPart`.
+---Determines the `CollisionType` of the `MeshPart`. Note that `CollisionType.Exact` will cause the `MeshPart` to not have any collision if `Anchored` is `false`.
 ---@field CollisionType CollisionType
----Plays the animation with the specified `animationName`, if it exists.
+---Plays the animation with the given `animationName`, if it exists.
 ---@field PlayAnimation fun(self: MeshPart, animationName: string, objectPath: string?, speed: number?, loop: boolean?)
 ---Stops playing the current animation.
 ---@field StopAnimation fun(self: MeshPart, name: string?)

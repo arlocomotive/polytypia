@@ -46,12 +46,12 @@ Input.KeyDown = nil
 ---@type Event<fun(key: KeyCodeString)>
 Input.KeyUp = nil
 
----Returns the value of the specified axis.
+---Returns the value of the axis with the given `axisName` with smooth filtering.
 ---@param axisName string
 ---@return number
 function Input:GetAxis(axisName) end
 
----Returns the value of the specified axis without smoothing filtering.
+---Returns the value of the axis with the given `axisName` without smooth filtering.
 ---@param axisName string
 ---@return number
 function Input:GetAxisRaw(axisName) end
@@ -145,12 +145,12 @@ function Input:ViewportToScreenPoint(viewportPoint) end
 ---@return Vector3
 function Input:ViewportToWorldPoint(viewportPoint) end
 
----Transforms the given `worldPositon` from world space into screen space.
----@param worldPositon AnyVector
+---Transforms the given `worldPoint` from world space into screen space.
+---@param worldPoint AnyVector
 ---@return Vector3
-function Input:WorldToScreenPoint(worldPositon) end
+function Input:WorldToScreenPoint(worldPoint) end
 
----Transforms the given `worldPositon` from world space into viewport space.
----@param worldPositon AnyVector
+---Transforms the given `worldPoint` from world space into viewport space.
+---@param worldPoint AnyVector
 ---@return Vector3
-function Input:WorldToViewportPoint(worldPositon) end
+function Input:WorldToViewportPoint(worldPoint) end

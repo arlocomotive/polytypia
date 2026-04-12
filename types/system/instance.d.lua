@@ -8,9 +8,9 @@
 ---@field CanReparent boolean
 ---Returns the name of the class.
 ---@field ClassName ClassName
----Specifies the name of an `Instance`.
+---Determines the name of an `Instance`.
 ---@field Name string
----Specifies the parent `Instance` of an `Instance`.
+---Determines the parent `Instance` of an `Instance`.
 ---@field Parent Instance
 ---An empty table you can use to hold metadata about anything on any `Instance` you want.
 ---
@@ -28,16 +28,17 @@
 ---@field MouseEnter Event<fun()>
 ---Fires when the mouse exits the `Instance`.
 ---@field MouseExit Event<fun()>
----Fires when the `Instance` was touched by another `Instance`. If you are trying to detect a `Player` touching the `Instance`, make sure to check `otherPart:IsA("Player")` before continuing. Also, it's recommended to apply a debounce variable to the function.
+---Fires when the `Instance` was touched by another `Instance`.
 ---
 ---There must be an active collider on the `Instance` for this event to trigger (`Part`, `Player`, etc.)
----@field Touched Event<fun(otherPart: Instance)>
+---@field Touched Event<fun(other: Instance)>
 ---Fires when the `Instance` is no longer being touched by another `Instance`.
 ---
 ---There must be an active collider on the `Instance` for this event to trigger (`Part`, `Player`, etc.)
----@field TouchEnded Event<fun(otherPart: Instance)>
+---@field TouchEnded Event<fun(other: Instance)>
 ---Clones the `Instance`.
----@field Clone fun(self: Instance): Instance
+---@generic T: Instance
+---@field Clone fun(self: T): T
 ---Destroys the `Instance`. Same as `Delete`.
 ---@field Destroy fun(self: Instance, delay: number?)
 ---Deletes the `Instance`. Same as `Destroy`.
@@ -46,13 +47,13 @@
 ---@field GetParent fun(self: Instance): Instance?
 ---Sets the `Parent` of the `Instance`. Same as setting `Parent`.
 ---@field SetParent fun(self: Instance, newParent: Instance?)
----Returns whether or not the `Instance` is the specified `className`.
+---Returns whether or not `Instance.ClassName` is equal to the given `className`. This does not account for inheritance.
 ---@field IsA fun(self: Instance, className: ClassName): boolean
----Returns whether or not the `Instance` is a descendant (child, child of child, etc) of the specified `other`.
+---Returns whether or not the `Instance` is a descendant of the given `other`.
 ---@field IsDescendantOf fun(self: Instance, other: Instance): boolean
----Attempts to find the first child `Instance` with the specified `name`.
+---Attempts to find the first child `Instance` with the given `name`.
 ---@field FindChild fun(self: Instance, name: string): Instance?
----Attempts to find the first child `Instance` with the specified `className`.
+---Attempts to find the first child `Instance` with the given `className`.
 ---@field FindChildByClass fun(self: Instance, className: string): Instance?
 ---@field FindChildByClass fun(self: Instance, className: "BodyPosition"): BodyPosition?
 ---@field FindChildByClass fun(self: Instance, className: "BoolValue"): BoolValue?
@@ -113,9 +114,9 @@
 ---@field FindChildByClass fun(self: Instance, className: "SunLight"): SunLight?
 ---@field FindChildByClass fun(self: Instance, className: "ValueBase"): ValueBase?
 ---@field FindChildByClass fun(self: Instance, className: "Climbable"): Climbable?
----Returns an array of all the children `Instance`s parented to the `Instance`.
+---Returns an array of all the children parented to the `Instance`.
 ---@field GetChildren fun(self: Instance): Instance[]
----Returns an array of all the children `Instance`s with the specified `className`.
+---Returns an array of all the children parented to the `Instance` with the given `className`.
 ---@field GetChildrenOfClass fun(self: Instance, className: string): Instance[]
 ---@field GetChildrenOfClass fun(self: Instance, className: "BodyPosition"): BodyPosition[]
 ---@field GetChildrenOfClass fun(self: Instance, className: "BoolValue"): BoolValue[]
@@ -178,6 +179,8 @@
 ---@field GetChildrenOfClass fun(self: Instance, className: "Climbable"): Climbable[]
 ---Returns the `Bounds` of the `Instance`.
 ---@field GetBounds fun(self: Instance): Bounds
+---@field [string] Instance
+---@field [integer] Instance
 
 Instance = {}
 

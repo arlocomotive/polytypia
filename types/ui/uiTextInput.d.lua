@@ -1,27 +1,33 @@
 ---@meta UITextInput
 ---`UIHVLayout` is an `Instance` that allows the `Player` to enter text.
 ---@class (exact) UITextInput: UIView
----Determines whether or not the text should be automatically sized to fit the `UITextInput`'s size.
----@field AutoSize boolean
----Determines the font of the `UITextInput`.
----@field Font TextFontPreset
----Determines the font size of the `UITextInput`.
----@field FontSize number
----Determines whether or not the `UITextInput` can be multiline.
----@field IsMultiline boolean
----Determines whether or not the `UITextInput` can be edited.
----@field IsReadOnly boolean
----Determines how the text is justified.
----@field JustifyText TextJustify
----Determines the maximum font size of the `UITextInput` if `AutoSize` is enabled.
----@field MaxFontSize number
----Determines the placeholder text of the `UITextInput`.
----@field Placeholder string
----Determines the color of the placeholder text.
----@field PlaceholderColor Color
 ---Determines the text of the `UITextInput`.
 ---@field Text string
 ---Determines the color of the text.
 ---@field TextColor Color
+---Determines how the text is justified.
+---@field JustifyText TextJustify
 ---Determines the vertical alignment of the text.
 ---@field VerticalAlign TextVerticalAlign
+---Determines the font size of the `UITextInput`.
+---@field FontSize number
+---Determines the maximum font size of the `UITextInput` if `AutoSize` is enabled.
+---@field MaxFontSize number
+---Determines whether or not the text should be automatically sized to fit the `UITextInput`'s size.
+---@field AutoSize boolean
+---Determines the font of the `UITextInput`.
+---@field Font TextFontPreset
+---Determines the placeholder text of the `UITextInput`.
+---@field Placeholder string
+---Determines the color of the placeholder text.
+---@field PlaceholderColor Color
+---Determines whether or not the `UITextInput` can be multiline.
+---@field IsMultiline boolean
+---Determines whether or not the `UITextInput` can be edited.
+---@field IsReadOnly boolean
+---Returns whether or not the `UITextInput` is focused.
+---@field IsFocused boolean
+---Unknown.
+---@field Changed Event<fun(value: string)>
+---Unknown.
+---@field Submitted Event<fun(value: string)>
