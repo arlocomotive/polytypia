@@ -1,19 +1,19 @@
 ---@meta NPC
 ---`NPC` (non-player character) is a `DynamicInstance` similar to a `Player` but that can be controlled by code. Like `Player`s, it can walk and jump, and its body part colors can be customized.
 ---@class (exact) NPC: DynamicInstance
----Determines the instance the NPC should walk towards.
+---Determines the `Instance` that the `NPC` should walk towards.
 ---@field MoveTarget Instance
----Determines the color of the `NPC`'s head.
+---Determines the `Color` of the `NPC`'s head.
 ---@field HeadColor Color
----Determines the color of the `NPC`'s torso.
+---Determines the `Color` of the `NPC`'s torso.
 ---@field TorsoColor Color
----Determines the color of the `NPC`'s left arm.
+---Determines the `Color` of the `NPC`'s left arm.
 ---@field LeftArmColor Color
----Determines the color of the `NPC`'s right arm.
+---Determines the `Color` of the `NPC`'s right arm.
 ---@field RightArmColor Color
----Determines the color of the `NPC`'s left leg.
+---Determines the `Color` of the `NPC`'s left leg.
 ---@field LeftLegColor Color
----Determines the color of the `NPC`'s right leg.
+---Determines the `Color` of the `NPC`'s right leg.
 ---@field RightLegColor Color
 ---Determines whether or not the `NPC` is anchored.
 ---@field Anchored boolean

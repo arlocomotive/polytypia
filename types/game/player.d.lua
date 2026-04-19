@@ -29,23 +29,23 @@
 ---@field Rotation Vector3
 ---Determines the position of the `Player`.
 ---@field Size Vector3
----Determines the `Player`'s username color in the chat.
+---Determines the `Player`'s username `Color` in the chat.
 ---@field ChatColor Color
 ---Determines whether or not the `Player` can move.
 ---@field CanMove boolean
 ---Determines whether or not the `Player` is anchored. The idle animation still plays and this property does not reset on `Respawned`.
 ---@field Anchored boolean
----Determines the color of the `Player`'s head.
+---Determines the `Color` of the `Player`'s head.
 ---@field HeadColor Color
----Determines the color of the `Player`'s torso.
+---Determines the `Color` of the `Player`'s torso.
 ---@field TorsoColor Color
----Determines the color of the `Player`'s left arm.
+---Determines the `Color` of the `Player`'s left arm.
 ---@field LeftArmColor Color
----Determines the color of the `Player`'s right arm.
+---Determines the `Color` of the `Player`'s right arm.
 ---@field RightArmColor Color
----Determines the color of the `Player`'s left leg.
+---Determines the `Color` of the `Player`'s left leg.
 ---@field LeftLegColor Color
----Determines the color of the `Player`'s right leg.
+---Determines the `Color` of the `Player`'s right leg.
 ---@field RightLegColor Color
 ---Determines the ID of the shirt the `Player` is wearing.
 ---@field ShirtID integer
