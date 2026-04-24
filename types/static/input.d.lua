@@ -112,45 +112,45 @@ function Input:GetMouseWorldPosition() end
 function Input:GetMouseWorldPoint() end
 
 ---Casts a ray from the `Camera` at the given `screenPoint` into the world.
----@param screenPoint AnyVector
+---@param screenPoint Vector3
 ---@param ignoreList Instance[]?
 ---@return RayResult?
 function Input:ScreenPointToRay(screenPoint, ignoreList) end
 
 ---Casts a ray from the `Camera` at the given `viewportPoint` into the world.
----@param viewportPoint AnyVector
+---@param viewportPoint Vector3
 ---@param ignoreList Instance[]?
 ---@return RayResult?
 function Input:ViewportPointToRay(viewportPoint, ignoreList) end
 
 ---Transforms the given `screenPoint` from screen space into viewport space.
----@param screenPoint AnyVector
+---@param screenPoint Vector3
 ---@return Vector3
 function Input:ScreenToViewportPoint(screenPoint) end
 
 ---Transforms the given `screenPoint` from screen space into world space.
 ---
 ---World space coordinates can still be calculated even when provided as an off-screen coordinate.
----@param screenPoint AnyVector
+---@param screenPoint Vector3
 ---@return Vector3
 function Input:ScreenToWorldPoint(screenPoint) end
 
 ---Transforms the given `screenPoint` from viewport space into screen space.
----@param viewportPoint AnyVector
+---@param viewportPoint Vector3
 ---@return Vector3
 function Input:ViewportToScreenPoint(viewportPoint) end
 
 ---Transforms the given `screenPoint` from viewport space into world space.
----@param viewportPoint AnyVector
+---@param viewportPoint Vector3
 ---@return Vector3
 function Input:ViewportToWorldPoint(viewportPoint) end
 
 ---Transforms the given `worldPoint` from world space into screen space.
----@param worldPoint AnyVector
+---@param worldPoint Vector3
 ---@return Vector3
 function Input:WorldToScreenPoint(worldPoint) end
 
 ---Transforms the given `worldPoint` from world space into viewport space.
----@param worldPoint AnyVector
+---@param worldPoint Vector3
 ---@return Vector3
 function Input:WorldToViewportPoint(worldPoint) end

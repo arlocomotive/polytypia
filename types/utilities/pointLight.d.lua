@@ -5,7 +5,7 @@
 ---@field Range number
 ---Determines how bright/intense the `PointLight` is.
 ---@field Brightness number
----Determines the color of the `PointLight`.
+---Determines the `Color` of the `PointLight`.
 ---@field Color Color
 ---Determines whether the `PointLight` casts shadows or not.
 ---@field Shadows boolean

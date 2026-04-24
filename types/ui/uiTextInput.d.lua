@@ -3,7 +3,7 @@
 ---@class (exact) UITextInput: UIView
 ---Determines the text of the `UITextInput`.
 ---@field Text string
----Determines the color of the text.
+---Determines the `Color` of the text.
 ---@field TextColor Color
 ---Determines how the text is justified.
 ---@field JustifyText TextJustify
@@ -19,7 +19,7 @@
 ---@field Font TextFontPreset
 ---Determines the placeholder text of the `UITextInput`.
 ---@field Placeholder string
----Determines the color of the placeholder text.
+---Determines the `Color` of the placeholder text.
 ---@field PlaceholderColor Color
 ---Determines whether or not the `UITextInput` can be multiline.
 ---@field IsMultiline boolean

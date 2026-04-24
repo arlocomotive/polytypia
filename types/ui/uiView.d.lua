@@ -1,11 +1,11 @@
 ---@meta UIView
 ---`UIView` is an `Instance` that displays a rectangle.
 ---@class (exact) UIView: UIField
----Determines the border color of the `UIView`.
+---Determines the border `Color` of the `UIView`.
 ---@field BorderColor Color
 ---Determines the border width of the `UIView`.
 ---@field BorderWidth number
----Determines the color of the `UIView`.
+---Determines the `Color` of the `UIView`.
 ---@field Color Color
 ---Determines the corner radius of the `UIView`.
 ---@field CornerRadius number

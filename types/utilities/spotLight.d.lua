@@ -7,7 +7,7 @@
 ---@field Angle number
 ---Determines how bright/intense the `SpotLight` is.
 ---@field Brightness number
----Determines the color of the `SpotLight`.
+---Determines the `Color` of the `SpotLight`.
 ---@field Color Color
 ---Determines whether the `SpotLight` casts shadows or not.
 ---@field Shadows boolean

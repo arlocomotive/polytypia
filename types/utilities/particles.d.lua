@@ -7,7 +7,7 @@
 ---@field ImageType ImageType
 ---Determines the size of a particle over its lifetime.
 ---@field Color ColorRange
----Determines the color mode of the particles.
+---Determines the `Color` mode of the particles.
 ---@field ColorMode ParticleColorMode
 ---Determines the range of the lifetime of the particles. A random value in this `NumberRange` will be chosen for each particle lifetime.
 ---@field Lifetime NumberRange

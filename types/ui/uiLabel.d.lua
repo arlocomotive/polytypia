@@ -3,7 +3,7 @@
 ---@class (exact) UILabel: UIView
 ---Determines the text of the `UILabel`.
 ---@field Text string
----Determines the color of the text.
+---Determines the `Color` of the text.
 ---@field TextColor Color
 ---Determines how the text is justified.
 ---@field JustifyText TextJustify

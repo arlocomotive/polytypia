@@ -9,7 +9,7 @@
 ---@field AtmosphereThickness number
 ---Determines the tint of the upper part of the `ProceduralSky`.
 ---@field SkyTint Color
----Determines the color of the lower part of the `ProceduralSky`.
+---Determines the `Color` of the lower part of the `ProceduralSky`.
 ---@field GroundColor Color
 ---Determines the exposure of the `ProceduralSky`.
 ---@field Exposure number

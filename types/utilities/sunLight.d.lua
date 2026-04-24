@@ -3,7 +3,7 @@
 ---@class (exact) SunLight: DynamicInstance
 ---Determines how bright/intense the `SunLight` is.
 ---@field Brightness number
----Determines the color of the `SunLight`.
+---Determines the `Color` of the `SunLight`.
 ---@field Color Color
 ---Determines whether the `SunLight` casts shadows or not.
 ---@field Shadows boolean

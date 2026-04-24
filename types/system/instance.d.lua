@@ -179,7 +179,7 @@
 ---@field GetChildrenOfClass fun(self: Instance, className: "Climbable"): Climbable[]
 ---Returns the `Bounds` of the `Instance`.
 ---@field GetBounds fun(self: Instance): Bounds
----@field [string] Instance
+---@field [string] Instance?
 ---@field [integer] Instance
 
 Instance = {}

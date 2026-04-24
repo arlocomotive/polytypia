@@ -11,7 +11,7 @@
 ---@field FogStartDistance number
 ---Determines the distance from the `Camera` at which fog is fully opaque.
 ---@field FogEndDistance number
----Determines the color of the fog.
+---Determines the `Color` of the fog.
 ---@field FogColor Color
 ---Determines the height at which unanchored `Part`s are destroyed and `Player`s are killed.
 ---@field PartDestroyHeight number
