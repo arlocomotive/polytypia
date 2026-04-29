@@ -100,14 +100,14 @@ function Quaternion.LerpUnclamped(a, b, t) end
 
 ---Normalizes the `magnitude` of `value` to 1 while maintaining its rotation.
 ---@param q Quaternion The quaternion to be normalized.
-function Vector3.Normalize(q) end
+function Quaternion.Normalize(q) end
 
 ---Rotates a `Quaternion` `from` towards `to`.
 ---@param from Quaternion The unit `Quaternion` to be aligned with `to`.
 ---@param to Quaternion The target unit `Quaternion`.
 ---@param maxDegreesDelta number The maximum angle in degrees allowed for this rotation.
 ---@return Quaternion
-function Vector3.RotateTowards(from, to, maxDegreesDelta) end
+function Quaternion.RotateTowards(from, to, maxDegreesDelta) end
 
 ---Returns `a` and `b` spherically interpolated by `t`.
 ---@param a Quaternion Start unit `Quaternion` value. This value is returned when `t` = 0.
