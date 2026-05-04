@@ -1,5 +1,7 @@
 ---@meta Datastore
 ---@class (exact) Datastore
+---Returns the key of the `Datastore`.
+---@field Key string
 ---Returns whether or not the `Datastore` is loaded.
 ---@field Loading boolean
 ---Fires when the `Datastore` loads.
@@ -20,7 +22,7 @@
 ---If you are testing your place locally through Polytoria Creator, no requests will be made to the server and your data will not be saved after the session ends. You will need to upload your place to the website to test the requests.
 Datastore = {}
 
----Attempts to get a `Datastore` from the `Datastore` service.
----@param datastoreName string
+---Attempts to get the `Datastore` with the given `key` from the `Datastore` service.
+---@param key string
 ---@return Datastore
-function Datastore:GetDatastore(datastoreName) end
+function Datastore:GetDatastore(key) end
